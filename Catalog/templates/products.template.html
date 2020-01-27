@@ -13,6 +13,7 @@
         <li>
             {{product.name}} x {{product.stock}}
             <a href='{% url "edit_product_route" id=product.id %}'>Edit</a>
+            <a href='/delete_product/{{product.id}}'>Delete</a> 
         </li>
         {% endfor %}
     </ul>
