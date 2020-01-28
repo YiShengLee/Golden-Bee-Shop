@@ -18,7 +18,7 @@
             {{product.name}} x {{product.stock}}
             
             <!--Edit Button-->
-            <a href='{% url "edit_product_route" id=product.id %}'>Edit</a>
+            <a href='{% url "edit_product" id=product.id %}'>Edit</a>
             
             <!--Delete Button-->
             <a href='/delete_product/{{product.id}}'>Delete</a> 

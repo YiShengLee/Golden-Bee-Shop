@@ -19,11 +19,11 @@ from Catalog.views import index, show_products, create_product, edit_product, de
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
-    path('products/',show_products),
+    path('',index, name="index"),
+    path('products/',show_products, name="show_products"),
     path('create_product/',create_product),
-    path('edit_product/<id>', edit_product, name='edit_product_route'),
-    path('delete_product/<id>', delete_product),
-    path('categories/', show_categories),
-    path('create_category/', create_category),
+    path('edit_product/<id>', edit_product, name='edit_product'),
+    path('delete_product/<id>', delete_product, name="delete_product"),
+    path('categories/', show_categories, name="show_categories"),
+    path('create_category/', create_category, name='create_category'),
 ]
