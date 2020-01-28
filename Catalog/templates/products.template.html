@@ -10,7 +10,7 @@ Products
         {% for product in catalog %}
         <li>
             <!--Product Cateogry-->
-            Cateogry: {{ product.category }} |
+            Cateogry: {{ product.Category.name }} |
             
             <!--Product Information-->
             {{product.name}} x {{product.stock}}
@@ -22,5 +22,8 @@ Products
             <a href='/delete_product/{{product.id}}'>Delete</a> 
         </li>
         {% endfor %}
+        
+        <br>
+        <a href="{% url "create_product" %}"><button>Add Product</button></a>
     </ul>
 {% endblock %}

@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name="index"),
     path('products/',show_products, name="show_products"),
-    path('create_product/',create_product),
+    path('create_product/',create_product, name="create_product"),
     path('edit_product/<id>', edit_product, name='edit_product'),
     path('delete_product/<id>', delete_product, name="delete_product"),
     path('categories/', show_categories, name="show_categories"),
