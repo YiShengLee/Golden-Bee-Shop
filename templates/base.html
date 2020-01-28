@@ -50,15 +50,24 @@
         </ul>
 
       </div>
-    </nav>    
+    </nav>  
     
+    <!--Pop up Message-->
+    {% if messages %}
+    <div>
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}      
     
-    
+    <!--Display Content-->
     <div>
         {% block content %} {% endblock %}
     </div>
     
-    
+    <!--footer-->
+    <footer class="text-center bg-dark p-1 footer">
+        <span class="text-white">&copy Golden Bee 2020 | Lee Yi Sheng</span>
+    </footer>    
     
     
     <!--Bootstrap Script-->
