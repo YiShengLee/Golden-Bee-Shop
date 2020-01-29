@@ -4,11 +4,12 @@
 Create Product
 {% endblock %}
 
+{% load crispy_forms_tags %}
 {% block content %}
 {{ form.media }}
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
     <input type="submit" name="Submit"/>
 </form>
 {% endblock %}
