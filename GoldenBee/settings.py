@@ -138,3 +138,6 @@ UPLOADCARE = {
 
 # Enable auto form formatting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Enable flash message
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

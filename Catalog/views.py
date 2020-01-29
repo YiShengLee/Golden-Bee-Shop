@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from .forms import ProductForm, CategoryForm
 from .models import Product, Category
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -20,6 +21,7 @@ def create_product(request):
         # User submitted form
         if form.is_valid():
             form.save()
+            messages.success(request, "Product has been added!")
             return redirect(show_products)
         else:
             print(form.errors)

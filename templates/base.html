@@ -53,14 +53,23 @@
     </nav>  
     
     <!--Pop up Message-->
-    {% if messages %}
-    <div>
-        {% for message in messages %} {{ message }} {% endfor %}
-    </div>
-    {% endif %}      
+    <!--{% if messages %}-->
+    <!--<div>-->
+    <!--    {% for message in messages %} {{ message }} {% endfor %}-->
+    <!--</div>-->
+    <!--{% endif %}      -->
     
     <!--Display Content-->
     <div class="container-fluid">
+      <!--Display alert message-->
+         {% if messages %}
+      <div class='alert alert-success'>
+          <div>
+              {% for message in messages %} {{ message }} {% endfor %}
+          </div>
+      </div>
+        {% endif %}
+        <!--Display your content-->
         {% block content %} {% endblock %}
     </div>
     
