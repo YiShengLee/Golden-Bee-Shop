@@ -13,14 +13,29 @@ Home
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
+        <!--First Carousel Slide Section-->
         <div class="carousel-item active">
-          <img class="d-block w-100" src="{% static 'images/picture1.png'%}" alt="First slide">
+          <img class="d-block w-100" src="{% static 'images/picture1.png'%}" alt="Type of Honey">
+          <div class="carousel-caption d-none d-md-block">
+            <p class="index_txt">The hum of the bees is the voice of the garden</p>
+            <a href={% url 'show_products' %}><button>Shop here now!</button></a>
+          </div>  
         </div>
+        <!--Second Carousel Slide Section-->
         <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'images/picture2.jpg'%}" alt="Second slide">
+          <img class="d-block w-100" src="{% static 'images/picture2.jpg'%}" alt="Flow Hive">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>The hum of the bees is the voice of the garden</h5>
+            <a href={% url 'show_products' %}><button>Shop here now!</button></a>
+          </div>        
         </div>
+        <!--Third Carousel Slide Section-->
         <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'images/picture3.jpg'%}" alt="Third slide">
+          <img class="d-block w-100" src="{% static 'images/picture3.jpg'%}" alt="Honey Bee">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>The hum of the bees is the voice of the garden</h5>
+            <a href={% url 'show_products' %}><button>Shop here now!</button></a>
+          </div>        
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

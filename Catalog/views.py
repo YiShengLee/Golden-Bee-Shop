@@ -21,6 +21,10 @@ def create_product(request):
         if form.is_valid():
             form.save()
             return redirect(show_products)
+        else:
+            print(form.errors)
+            return HttpResponse("Errors")
+            
         
     else:
         product_form = ProductForm()

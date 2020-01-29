@@ -15,6 +15,11 @@ Products
             <!--Product Information-->
             {{product.name}} x {{product.stock}}
             
+            {%if product.image %}
+                <img src="{{product.image.cdn_url}}"/>
+            {%endif%}
+            
+            
             <!--Edit Button-->
             <a href='{% url "edit_product" id=product.id %}'>Edit</a>
             

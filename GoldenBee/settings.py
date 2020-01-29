@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pyuploadcare.dj',
     'Catalog',
 ]
 
@@ -124,3 +125,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+UPLOADCARE_PUBLIC_KEY = os.environ['UPLOADCARE_PUBLIC_KEY']
+UPLOADCARE_SECRET_KEY = os.environ['UPLOADCARE_SECRET_KEY']
+
+UPLOADCARE = {
+    'pub_key': UPLOADCARE_PUBLIC_KEY,
+    'secret': UPLOADCARE_SECRET_KEY,
+}
