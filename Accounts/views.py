@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import auth, messages
 from .forms import UserLoginForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def members(request):
@@ -19,6 +20,8 @@ def login(request):
             auth.login(user=user, request=request)
             messages.success(request, "You have successfully logged in")
             return redirect(reverse('show_products'))
+        
+        # If user is not valid
         else:
             login_form.add_error(None,"Invalid username or password")
             return render(request, 'login.template.html', {
@@ -36,3 +39,6 @@ def logout(request):
     messages.success(request, "You have successfully been logged out")
     return redirect(reverse('members'))  
 
+@login_required
+def profile(request):
+    return render(request, 'user_profile.template.html')

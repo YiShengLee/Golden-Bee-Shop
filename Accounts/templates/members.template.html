@@ -8,7 +8,7 @@ Member's Area
 <h1>Welcome!</h1>
 
 {% if request.user.username %}
-Logged In As:{{request.user.username}}
+Logged In As: {{request.user.username}}
 {% endif %}
 
 <!--Display alert message-->
@@ -25,7 +25,8 @@ Logged In As:{{request.user.username}}
     {% endif %}
     
     <li>Register</li>
-    <li>Profile</li>
+    
+    <li><a href="{% url 'profile' %}">Profile</a></li>
     
     <!--Logout Section-->
     {% if user.is_authenticated %}
