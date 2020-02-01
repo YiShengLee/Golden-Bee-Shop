@@ -151,3 +151,6 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
 
 )
+
+# Accounts Login Setting
+LOGIN_URL = 'login'
