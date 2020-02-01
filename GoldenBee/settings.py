@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pyuploadcare.dj',
     'crispy_forms',
     'Catalog',
+    'Accounts',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Enable flash message
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+# Enable Account Setting
+AUTH_USER_MODEL = 'Accounts.MyUser' 
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by custom User model, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+
+)
