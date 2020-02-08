@@ -1,0 +1,1 @@
+web: gunicorn GoldenBee.wsgi:application

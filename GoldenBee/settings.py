@@ -25,7 +25,7 @@ SECRET_KEY = '-#+bwcq%*v2pyk&jt%e6b0l*^3hoq^+hw#(h0t=$mow=b74nkp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['golden-bee-honey.herokuapp.com','*']
 
 
 # Application definition
@@ -128,6 +128,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Enable uploading of images
 UPLOADCARE_PUBLIC_KEY = os.environ['UPLOADCARE_PUBLIC_KEY']
