@@ -21,7 +21,7 @@ def create_product(request):
         # User submitted form
         if form.is_valid():
             form.save()
-            messages.success(request, "Product has been added!")
+            messages.success(request,"Product has been added!")
             return redirect(show_products)
         else:
             print(form.errors)
