@@ -21,7 +21,7 @@ def create_product(request):
         # User submitted form
         if form.is_valid():
             form.save()
-            messages.success(request,"Product has been added!")
+            messages.success(request,"Product [" + form.data.get('name') + "] has been added!")
             return redirect(show_products)
         else:
             print(form.errors)
@@ -43,6 +43,7 @@ def edit_product(request,id):
         form = ProductForm(request.POST,instance=product_edited)
         if form.is_valid():
             form.save()
+            messages.success(request,"Product [" + form.data.get('name') + "] has been edited successfully!")
             return redirect(show_products)
         else:
             print(form.errors)
