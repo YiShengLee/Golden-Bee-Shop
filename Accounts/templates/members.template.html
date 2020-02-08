@@ -24,9 +24,11 @@ Logged In As: {{request.user.username}}
     <li><a href="{% url 'login' %}">Login</a></li>
     {% endif %}
     
-    <li>Register</li>
+    <!--Register Section-->
+    <li><a href="{% url 'register' %}">Register</a></li>
     
-    <li><a href="{% url 'profile' %}">Profile</a></li>
+    <!--Register Section-->
+    <li><a href="{% url 'profile' %}">Your Profile</a></li>
     
     <!--Logout Section-->
     {% if user.is_authenticated %}

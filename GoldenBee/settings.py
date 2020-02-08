@@ -154,3 +154,6 @@ AUTHENTICATION_BACKENDS = (
 
 # Accounts Login Setting
 LOGIN_URL = 'login'
+
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')

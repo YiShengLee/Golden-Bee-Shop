@@ -26,5 +26,5 @@ urlpatterns = [
     path('delete_product/<id>', delete_product, name="delete_product"),
     path('categories/', show_categories, name="show_categories"),
     path('create_category/', create_category, name='create_category'),
-    path('accounts/', include('Accounts.urls'))
+    path('accounts/', include('Accounts.urls')),
 ]
