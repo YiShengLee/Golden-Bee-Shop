@@ -4,6 +4,7 @@ from .forms import UserLoginForm, UserRegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from .models import MyUser
+from django.core.mail import BadHeaderError, send_mail
 
 # Create your views here.
 def members(request):
@@ -66,7 +67,7 @@ def register(request):
         return render(request, 'register.template.html',{
             'form':form
         })
-            
+
 
 @login_required
 def profile(request):
