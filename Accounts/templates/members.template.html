@@ -22,6 +22,8 @@ Logged In As: {{request.user.username}}
     <!--Login Section-->
     {% if not user.is_authenticated %}
     <li><a href="{% url 'login' %}">Login</a></li>
+    <!--<li><a href="">Reset Password</a></li>-->
+    <li><a href="{% url 'password_reset' %}">Lost password?</a></li>
     {% endif %}
     
     <!--Register Section-->
@@ -34,6 +36,7 @@ Logged In As: {{request.user.username}}
     {% if user.is_authenticated %}
     <li><a href="{% url 'logout' %}">Logout</a></li>   
     {% endif %}
+    
 </ul>
 
 {% endblock %}
