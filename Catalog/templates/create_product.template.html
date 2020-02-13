@@ -6,10 +6,16 @@ Create Product
 
 {% load crispy_forms_tags %}
 {% block content %}
-{{ form.media }}
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" name="Submit"/>
-</form>
+<!--{{ form.media }}-->
+
+<div class="container c1">
+    
+    <!--Form Section-->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% crispy form %}
+        <input type="submit" name="Submit" class="btn btn-danger"/>
+    </form>  
+</div>
+
 {% endblock %}

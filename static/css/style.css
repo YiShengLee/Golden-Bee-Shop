@@ -21,3 +21,24 @@
     border-radius:15px 50px;
     padding: 1.5rem;
 }
+
+/*================== Product Section ================== */
+.c1{
+    max-width:85vw;
+    background-image:url(/static/images/add_honey.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    padding: 70px;
+    border-radius: 2rem;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+
+/*Form Label Section*/
+#div_id_name label{
+    font-size: 25px;
+    font-family: 'DM Serif Text', serif;
+    font-weight: bold;
+}
