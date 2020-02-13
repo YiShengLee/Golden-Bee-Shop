@@ -10,7 +10,7 @@ class ProductForm(forms.ModelForm):
     # image = ImageField(label="Upload Image", widget=FileWidget())
     
     # Set the label of the forms
-    name = forms.CharField(label="Product Name",widget=forms.TextInput(attrs={'placeholder': 'Search'}))
+    # name = forms.CharField(label="Product Name")
     # Inner Class
     class Meta:
         model = Product
@@ -23,20 +23,24 @@ class ProductForm(forms.ModelForm):
         super(ProductForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-
-            PrependedText('name','<img src="https://img.icons8.com/dotty/20/000000/product.png">'),
+            # Input name box
             Div(
-                'price', 
+                PrependedText('name','<img src="https://img.icons8.com/dotty/20/000000/product.png">', placeholder="Enter your product name"),
+                css_class='productname',
+                ),
+            
+            Div(
+                PrependedText('price','<img src="https://img.icons8.com/dotty/20/000000/expensive-2.png">'),
                 css_class='productprice'
-            ),
+                ),
             Div(
                 'stock', 
                 css_class='productstock'
-            ),
+                ),
             Div(
                 'Category', 
                 css_class='productCategory'
-            ),
+                ),
             Row(
                 'image',
                 css_class='productimage'
