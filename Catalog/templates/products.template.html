@@ -43,15 +43,23 @@ Products
                     </div>
                 </div>
             </div>
-            
-            
+        
+        <!--Add to cart Section-->
+        <form method="post" action='{% url "add_cart" product.id %}' id="mainAdd">
+            {% csrf_token %}
+            <button class="btn btn-info" type="submit" id="productButton">Add to Cart</button>
+        </form>    
             
         </li>
+        
+        
         {% endfor %}
         
         
         
         <br>
+        
+        <!--Add new product Section-->
         <a href="{% url "create_product" %}"><button>Add Product</button></a>
     </ul>
 {% endblock %}
