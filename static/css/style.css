@@ -22,8 +22,8 @@
     padding: 1.5rem;
 }
 
-/*================== Product Section ================== */
-.c1{
+/*================== Create Product Section ================== */
+.c2{
     max-width:85vw;
     background-image:url(/static/images/add_honey.png);
     background-repeat: no-repeat;
@@ -35,10 +35,12 @@
     box-shadow: 10px 10px 5px #aaaaaa;
 }
 
+/*Form Header Section*/
 .productname, .productprice, .productstock, .productCategory, .productimage{
     font-size: 25px;
     font-family: 'DM Serif Text', serif;
     font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 /*Form Label Section*/
@@ -47,3 +49,16 @@
     font-family: 'DM Serif Text', serif;
     font-weight: bold;
 }
+
+.submit{
+    font-size: 30px;
+    font-family: 'DM Serif Text', serif;
+    border-radius: 20px;
+    padding: 10px 35px;
+}
+
+.submit:hover{
+    background-color:rgb(80,183,103);
+    border-color:rgb(80,183,103);
+}
+

@@ -7,7 +7,7 @@ class Product(models.Model):
      name = models.CharField(max_length=200, blank=False, verbose_name="Product Name")
      price = models.DecimalField(max_digits=6, decimal_places=2, blank=False)
      stock = models.IntegerField(blank=False, verbose_name="No of Unit")
-     Category = models.ForeignKey("Category", blank=True, null=True, on_delete=models.SET_NULL, verbose_name="Type of Honey")
+     Category = models.ForeignKey("Category", blank=False, null=True, on_delete=models.SET_NULL, verbose_name="Type of Honey")
      image = ImageField(blank=True, verbose_name="Upload Product Image")
      
      def __str__(self):

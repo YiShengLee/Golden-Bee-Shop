@@ -9,8 +9,7 @@ class ProductForm(forms.ModelForm):
     
     # image = ImageField(label="Upload Image", widget=FileWidget())
     
-    # Set the label of the forms
-    # name = forms.CharField(label="Product Name")
+
     # Inner Class
     class Meta:
         model = Product
@@ -30,15 +29,15 @@ class ProductForm(forms.ModelForm):
                 ),
             
             Div(
-                PrependedText('price','<img src="https://img.icons8.com/dotty/20/000000/expensive-2.png">'),
+                PrependedText('price','<img src="https://img.icons8.com/dotty/20/000000/expensive-2.png">', placeholder="Enter the honey cost in (\u00A2)"),
                 css_class='productprice'
                 ),
             Div(
-                'stock', 
+                PrependedText('stock','<img src="https://img.icons8.com/dotty/20/000000/garage-open.png">', placeholder="Enter the quantities of honey"),
                 css_class='productstock'
                 ),
             Div(
-                'Category', 
+                PrependedText('Category', '<img src="https://img.icons8.com/dotty/20/000000/sorting-answers.png">'),
                 css_class='productCategory'
                 ),
             Row(

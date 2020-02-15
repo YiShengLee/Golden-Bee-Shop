@@ -8,13 +8,13 @@ Create Product
 {% block content %}
 <!--{{ form.media }}-->
 
-<div class="container c1">
+<div class="container c2">
     
     <!--Form Section-->
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {% crispy form %}
-        <input type="submit" name="Submit" class="btn btn-danger"/>
+        <input type="submit" name="Submit" class="btn btn-warning submit"/>
     </form>  
 </div>
 
