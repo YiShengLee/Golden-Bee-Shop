@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from Catalog.models import Product
 
 # Add product to cart section
+@login_required(login_url='/accounts/login/')
 def add_to_cart(request, id):
     cart = request.session.get('shopping_cart', {})
     

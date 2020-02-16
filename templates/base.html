@@ -26,18 +26,27 @@
         
         <span class="navbar-toggler-icon"></span>
       </button>
+      
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <!--Navbar Home Section-->
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
           </li>
+          <!--Navbar Display Products Section-->
           <li class="nav-item active">
             <a class="nav-link" href="{% url "show_products" %}">Products</a>
           </li>
+          <!--Navbar Members Section-->
           <li class="nav-item active">
             <a class="nav-link" href="{% url "members" %}">Member's Area</a>
           </li>
+          
+          <!--Navbar Shopping Cart Section-->
+          <!--<li class="nav-item active">-->
+          <!--<a class="nav-link shopping_cart" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart({{number_of_items}})</a>-->
+          <!--</li>-->
           
           <!--List Dropdown Section-->
           <!--<li class="nav-item dropdown">-->
@@ -53,13 +62,18 @@
           <!--</li>-->
 
         </ul>
-
+        
+        <!--Shopping Cart Section-->
+        {% if user.is_authenticated %}
+        <button class="btn btn-primary ml-auto mr-1"><a class="shopping_cart" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart({{number_of_items}})</a></button>
+        {% endif %}
+        
       </div>
     </nav>  
     
     
     <!--Display Content-->
-    <a href="{% url 'view_cart' %}">Shopping Cart ({{number_of_items}})</a>
+    
     <div class="container-fluid">
       <!--Display alert message-->
          {% if messages %}
@@ -87,5 +101,8 @@
     <!--Javascript Section-->
     <script src="{% static 'js/jquery.js'%}"></script>
     <script src="{% static 'js/script.js'%}"></script>
+    
+    <!--Font Awesome Section-->
+    <script src="https://kit.fontawesome.com/2344b1213a.js" crossorigin="anonymous"></script>
 </body>
 </html>
