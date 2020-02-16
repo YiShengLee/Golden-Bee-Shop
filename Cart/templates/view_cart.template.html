@@ -14,6 +14,7 @@ View Cart
             {{i.name}}<br/>
             ${{i.price}}
         </li>
+        <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</i></a>
     {%endfor%}
 </ul>
 
