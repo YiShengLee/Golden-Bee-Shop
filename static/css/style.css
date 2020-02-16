@@ -10,6 +10,55 @@
     color: black;
 }
 
+.footer{
+    background-color:rgb(235,219,178);
+}
+
+.c3{
+    max-width: 85vw;
+    text-align: center;
+}
+
+/*Social Media Icon Css*/
+.fab{
+    font-size: 30px;
+    padding-right: 1rem;
+    color: rgb(253,149,77);
+}
+
+.foot{
+    padding: 0.5rem;
+}
+
+/*Facebook Hover Color*/
+.fa-facebook:hover{
+    color: #3B5998;
+}
+
+.fa-linkedin-in:hover{
+    color:#04669A;
+}
+
+.fa-github:hover{
+    color: #040204;
+}
+
+.fa-instagram:hover{
+   color:#2C6A93; 
+}
+
+.fa-twitter:hover{
+    color: #00B6F1;
+}
+
+.fa-pinterest:hover{
+    color: #C91517;
+}
+
+/*Testing Section*/
+.row .col{
+    border: 1px solid black;
+}
 
 /*================== Index Section ==================*/
 /*.c1{*/
