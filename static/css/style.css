@@ -79,7 +79,7 @@
     padding: 1.5rem;
 }
 
-/*================== Create Product Section ================== */
+/*================== Create Product Section ==================*/
 .c2{
     max-width:85vw;
     background-image:url(/static/images/add_honey.png);
@@ -119,3 +119,12 @@
     border-color:rgb(80,183,103);
 }
 
+
+/*================== Checkout Success Section ==================*/
+.checkout_success{
+    text-align: center;
+}
+
+.checkout_success img{
+    height: 200px;
+}
