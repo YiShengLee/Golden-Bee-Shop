@@ -14,9 +14,15 @@ from Catalog.models import Product
 def donate(request):
     return render(request, 'donate.template.html')
 
-
-            
-
 # Checkout Section
+@login_required        
+def checkout(request):
+    return render(request, 'checkout.template.html') 
+
+
+
+
+
+# Checkout Sucess Section
 def checkout_success(request):
     return render(request, 'checkout_success.template.html')
