@@ -19,7 +19,7 @@ def add_to_cart(request, id):
         
         # save the cart back to sessions
         request.session['shopping_cart'] = cart
-        messages.success(request, "Game has been added to your cart")
+        messages.success(request, "Item has been added to your cart")
         return redirect('show_products')
 
         
