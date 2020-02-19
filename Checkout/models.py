@@ -14,3 +14,16 @@ class Charge(models.Model):
 
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
+        
+
+class LineItem(models.Model):
+    product = models.ForeignKey(
+        'Catalog.Product',
+        null=True,
+        on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, blank=False)
+    price = models.IntegerField(blank=False)
+    quantity = models.PositiveIntegerField(default=1)
+
+    def cost(self):
+        return self.price * self.quantity

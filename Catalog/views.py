@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from .forms import ProductForm, CategoryForm
 from .models import Product, Category
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 def index(request):
@@ -15,6 +16,7 @@ def show_products(request):
     })
 
 # Create Product Section
+@user_passes_test(lambda u: u.is_superuser)
 def create_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST) #create a form

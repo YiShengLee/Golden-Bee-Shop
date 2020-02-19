@@ -19,16 +19,19 @@ Checkout
     <th>
       Price
     </th>
-    {%for i in cart_items %}
+    
+    
+    {{shopping_cart}}
+    {% for i,v in shopping_cart.items%}
     <tr>
       <td>
-        {{i.product.name}}
+        {{v.name}}
       </td>
       <td>
         {{i.quantity }}
       </td>
       <td>
-        ${{i.product.price}}0 
+        ${{v.price}} 
       </td>
     </tr>
     {% endfor %}
@@ -39,7 +42,7 @@ Checkout
       <td>
       </td>
       <td>
-        ${{total_cost}}0
+        ${{total_cost}}
       </td>
     </tr>
   </table>
