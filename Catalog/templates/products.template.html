@@ -5,7 +5,67 @@ Products
 {% endblock %}
 
 {% block content %}
-    <h1>Our Products</h1>
+<div class="pageheader">Golden Honey Products</div>
+
+<div class="container">
+    <div class="row">
+        {% for product in catalog %}
+        <!-- Team Member 1 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <div class="brandHeader">
+                    Honey Type:
+                </div>
+                
+                <div class="brand">
+                    {{product.Category.name}}
+                </div>
+                
+                <div class="imgHolder" align="center">
+                    <a href="">
+                        <img class="img-fluid" src="{{product.image.cdn_url}}-/resize/300x400/-/quality/lightest/">
+                    </a>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Brand: {{product.name}}</h5>
+                    <h5 class="card-title mb-0">Price: {{product.price}}</h5>
+                    <div class="card-text text-black-70">Quantity: {{product.stock}}</div><br>
+
+            
+                    <div id="accordion">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                              <h5 class="mb-0">
+                                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{forloop.counter}}">
+                                    Honey description<i class="fas fa-sort-down"></i>
+                                  </button>
+                                </h5>
+                          </div>
+
+                          <div id="collapse{{forloop.counter}}" class="collapse" data-parent="#accordion">
+                              <div class="card-body">
+                                  Insert Description
+                                  <div class="findOut pt-3">
+                                      <a class="btn btn-success" href="">Find Out More</a>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <!-- /.row -->
+</div>
+    
+    
+    
+    
+    
+    
     <ul>
         {% for product in catalog %}
         <li>
