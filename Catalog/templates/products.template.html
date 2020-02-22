@@ -5,7 +5,7 @@ Products
 {% endblock %}
 
 {% block content %}
-<div class="pageheader">Golden Honey Products</div>
+<div class="pageheader">Golden Honey Products</div> <br>
 
 <div class="container">
     <div class="row">
@@ -29,8 +29,9 @@ Products
                 <div class="card-body text-center">
                     <h5 class="card-title mb-0">Brand: {{product.name}}</h5>
                     <h5 class="card-title mb-0">Price: {{product.price}}</h5>
-                    <div class="card-text text-black-70">Quantity: {{product.stock}}</div><br>
-
+                    <div class="card-text text-black-70">Quantity: {{product.stock}}</div>
+                    
+                    <a class="btn btn-info" href="{% url "add_to_cart" id=product.id %}">Add to Cart</a>
             
                     <div id="accordion">
                         <div class="card">
@@ -109,7 +110,7 @@ Products
             
             <!--Add to cart Section-->
             
-            <a class="btn btn-info" href="{% url "add_to_cart" id=product.id %}">Add to Cart</a>
+            
             
         </li>
         
