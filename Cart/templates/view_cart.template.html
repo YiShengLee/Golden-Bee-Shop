@@ -5,8 +5,10 @@ View Cart
 {% endblock %}
 
 {% block content %}
-<h1>Testing 123</h1>
 
+{% if request.user.username %}
+<div class="CartTitle pageheader">{{request.user.username}}'s Cart</div>
+{% endif %}
 
 <ul>
     {%for id, i in shopping_cart.items %}
@@ -17,5 +19,7 @@ View Cart
         <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</i></a>
     {%endfor%}
 </ul>
+
+<a href="{% url 'checkout' %}" class="btn btn-success">Checkout</i></a>
 
 {% endblock %}

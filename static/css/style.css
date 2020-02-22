@@ -63,11 +63,13 @@
     font-size: 35px;
 }
 
+.pageheader{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
 
 /*================== Index Section ==================*/
-/*.c1{*/
-/*    max-height:70vh;*/
-/*}*/
 .carousel-item img {
   margin:0 auto;
   max-height: 85vh;
@@ -120,11 +122,17 @@
 }
 
 
-/*================== Checkout Success Section ==================*/
+/*================== Checkout Section ==================*/
 .checkout_success{
     text-align: center;
 }
 
 .checkout_success img{
     height: 200px;
+}
+
+/*================== Cart Section ==================*/
+
+.CartTitle{
+    text-transform: capitalize;
 }
