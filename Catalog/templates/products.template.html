@@ -20,6 +20,8 @@ Products
             {%endif%}
             
             
+            
+            {% if user.is_authenticated and user.is_superuser %}
             <!--Edit Button-->
             <a href='{% url "edit_product" id=product.id %}'>Edit</a>
             
@@ -43,10 +45,11 @@ Products
                     </div>
                 </div>
             </div>
-        
+            {%endif%}
+            
             <!--Add to cart Section-->
+            
             <a class="btn btn-info" href="{% url "add_to_cart" id=product.id %}">Add to Cart</a>
-           
             
         </li>
         
@@ -57,10 +60,11 @@ Products
         {% endfor %}
         
         
-        
         <br>
         
         <!--Add new product Section-->
+        {% if user.is_authenticated and user.is_superuser %}
         <a href="{% url "create_product" %}"><button>Add Product</button></a>
+        {%endif%}
     </ul>
 {% endblock %}
