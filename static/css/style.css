@@ -240,6 +240,13 @@
     font-family: Honeyfont;
 }
 
+.brand{
+    font-family: kitchen;
+    font-size: 30px;
+    background-color: rgb(224,162,0);
+    color: black;
+    padding: 1px;
+}
 
 
 @font-face {
@@ -247,6 +254,10 @@ font-family: "Honeyfont";
 src: url("/static/fonts/HoneyFont.ttf");
 }
 
+@font-face {
+font-family: "kitchen";
+src: url("/static/fonts/Kitchen.ttf");
+}
 
 
 
