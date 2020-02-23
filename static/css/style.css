@@ -240,7 +240,7 @@
 }
 
 /*Form Header Section*/
-.productname, .productprice, .productstock, .productCategory, .productimage{
+.productname, .productprice, .productstock, .productCategory, .productimage, .productdes{
     font-size: 25px;
     font-family: 'DM Serif Text', serif;
     font-weight: bold;

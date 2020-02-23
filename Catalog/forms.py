@@ -13,7 +13,7 @@ class ProductForm(forms.ModelForm):
     # Inner Class
     class Meta:
         model = Product
-        fields = ('name', 'price', 'stock', 'Category', 'image') #all information must be create in models.py
+        fields = ('name', 'price', 'stock', 'Category', 'description', 'image') #all information must be create in models.py
         # widgets = {
         #  'name': forms.TextInput(attrs={'class': 'productname'}),
         #  }
@@ -40,12 +40,17 @@ class ProductForm(forms.ModelForm):
                 PrependedText('Category', '<img src="https://img.icons8.com/dotty/20/000000/sorting-answers.png">'),
                 css_class='productCategory'
                 ),
+            Div(
+                PrependedText('description', '<img src="https://img.icons8.com/dotty/20/000000/create-new.png">'),
+                css_class='productdes'
+                ),    
+            
             Row(
                 'image',
                 css_class='productimage'
                 ),
                 
-            # Submit('submit', 'Submit', css_class='btn')
+            Submit('submit', 'Submit', css_class='btn btn-warning')
         )
         
 class CategoryForm(forms.ModelForm):
