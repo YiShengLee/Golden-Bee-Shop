@@ -5,9 +5,18 @@ Products
 {% endblock %}
 
 {% block content %}
+<!--Page Title-->
 <div class="pageheader"><img src="{% static 'images/Banner.png'%}"> Honey Products</div> <br>
 
+
+
 <div class="container">
+    
+    <!--Add new product Section-->
+    {% if user.is_authenticated and user.is_superuser %}
+    <a href="{% url "create_product" %}" class="btn"><button>Add Product</button></a>
+    {%endif%}
+    
     <div class="row">
         {% for product in catalog %}
         <!-- Team Member 1 -->
@@ -28,6 +37,7 @@ Products
                     <h5 class="card-title mb-0">Price: {{product.price}}</h5>
                     <div class="card-text text-black-70">Quantity: {{product.stock}}</div>
                     
+                    <!--Add to Cart Section-->
                     <a class="btn btn-info" href="{% url "add_to_cart" id=product.id %}">Add to Cart</a>
             
                     <div id="accordion">
@@ -51,37 +61,9 @@ Products
                         </div>
                     </div>
                     
-                </div>
-            </div>
-        </div>
-        {%endfor%}
-    </div>
-    <!-- /.row -->
-</div>
-    
-    
-    
-    
-    
-    
-    <ul>
-        {% for product in catalog %}
-        <li>
-            <!--Product Cateogry-->
-            Cateogry: {{ product.Category.name }} |
-            
-            <!--Product Information-->
-            {{product.name}} x {{product.stock}}
-            
-            {%if product.image %}
-                <img src="{{product.image.cdn_url}}"/>
-            {%endif%}
-            
-            
-            
-            {% if user.is_authenticated and user.is_superuser %}
+                                {% if user.is_authenticated and user.is_superuser %}
             <!--Edit Button-->
-            <a href='{% url "edit_product" id=product.id %}'>Edit</a>
+            <a href='{% url "edit_product" id=product.id %}' class="btn btn-success m-2 p-2">&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
             
             <!--Delete Button-->
             <!--<a href='{% url "delete_product" id=product.id %}'>Delete</a> -->
@@ -104,25 +86,15 @@ Products
                 </div>
             </div>
             {%endif%}
-            
-            <!--Add to cart Section-->
-            
-            
-            
-        </li>
-        
+                    
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <!-- /.row -->
+</div>
+    
+    
 
-
-        
-        
-        {% endfor %}
-        
-        
-        <br>
-        
-        <!--Add new product Section-->
-        {% if user.is_authenticated and user.is_superuser %}
-        <a href="{% url "create_product" %}"><button>Add Product</button></a>
-        {%endif%}
-    </ul>
 {% endblock %}
