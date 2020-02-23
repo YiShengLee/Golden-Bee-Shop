@@ -71,6 +71,39 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
+    font-family: 'Permanent Marker';
+    font-size: 25px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color:rgb(224,162,0);
+}
+
+@media only screen and (max-width: 767px){
+    
+}
+
+@media only screen and (max-width: 426px) {
+    .fab{
+        font-size: 20px;
+    }
+    .foot{
+        font-size:small;
+    }
+    .foot img{
+        height: 20px;
+    }
+    .icon{
+        height:30px;
+    }
+    .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
+        font-size: 15px;
+    }
+}
+
+
+
 /*================== Index Section ==================*/
 .carousel-item img {
   margin:0 auto;
