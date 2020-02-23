@@ -4,3 +4,8 @@ $("document").ready(function(){
     }, 4000 ); // 4 secs
 
 });
+
+$('.carousel').carousel({
+    interval: 4000,
+    pause: "hover"
+})
