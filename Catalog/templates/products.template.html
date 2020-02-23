@@ -35,7 +35,10 @@ Products
                 <div class="card-body text-center">
                     <h5 class="card-title mb-0">Brand: {{product.name}}</h5>
                     <h5 class="card-title mb-0">Price: {{product.price}}</h5>
+                    
+                    {% if user.is_authenticated and user.is_superuser %}
                     <div class="card-text text-black-70">Quantity: {{product.stock}}</div>
+                    {%endif%}
                     
                     <!--Add to Cart Section-->
                     <a class="btn btn-info" href="{% url "add_to_cart" id=product.id %}">Add to Cart</a>
@@ -61,7 +64,7 @@ Products
                         </div>
                     </div>
                     
-                                {% if user.is_authenticated and user.is_superuser %}
+            {% if user.is_authenticated and user.is_superuser %}
             <!--Edit Button-->
             <a href='{% url "edit_product" id=product.id %}' class="btn btn-success m-2 p-2">&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
             
