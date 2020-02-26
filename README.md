@@ -1,4 +1,4 @@
-# Golden Bee Shop [Project 4]
+# <span style="color:rgb(224,162,0)">Golden Bee Shop [Project 4]</span>
 ## Table of contents
 1. #### [Introduction](#introduction)
 2. #### [User Stories](#userstories)
@@ -19,7 +19,7 @@
 
 
 
-## Deployment <a name="deployment"></a>
+## 8.0 Deployment <a name="deployment"></a>
 The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/).  
 :heavy_exclamation_mark: Please have the following installed in your IDE environment before working on it :heavy_exclamation_mark:
 - [Python 3](https://docs.python.org/3/installing/index.html)
@@ -28,7 +28,7 @@ The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/).
 The website is deployed using Heroku and the link is [Project 4 Golden Bee](https://golden-bee-honey.herokuapp.com/).
 
 
-### How to deploy the code locally
+### 8.1 How to deploy the code locally
 If you wish to run this code locally, follow the instructions below:
 1.	Download the code from the Github repository at [https://github.com/YiShengLee/Golden-Bee-Shop](https://github.com/YiShengLee/Golden-Bee-Shop).
 2.	Click on Clone or download then Download ZIP. This will download the code into a ZIP folder locally on your computer.
@@ -39,13 +39,11 @@ If you wish to run this code locally, follow the instructions below:
 ![Github Clone Image](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/GitHub_clone.png)
 
 
-### Cloning from Github
+### 8.2 Cloning from Github
 If you would like to clone this repository to your own IDE, follow the instructions below:
 
-
-
 **Step 1: Cloning Project**  
-Clone the project into your IDE with running the following command in the terminal, ensure you at project's directory in your terminal.
+Clone the project into your IDE with running the following command in the terminal, ensure you at project's directory in your terminal:
 
 ```
 $ cd /home/user/*my_project*
@@ -57,41 +55,100 @@ git clone https://github.com/YiShengLee/Golden-Bee-Shop.git
 ```
 
 **Step 2: Installing Packages**  
-To install all the required packages, run this in your terminal.
+To install all the required packages, run this in your terminal:
 ```
 pip3 install -r requirements.txt
 ```
 
 **Step 3: Run a server**  
-To load the website, run this in your terminal.
+To load the website, run this in your terminal:
 ```
 python3 manage.py runserver 8080
 ```
 
 **Step 4: Link to view project**  
-A window will pop up with a link. Click on the link to view the project.  
+A window will pop up with a link. Click on the link to view the project. 
   
+<br>
 
+### 8.3 Deploying to Heroku
+This instructions shown below is from [Paul](https://github.com/kunxin-chor).  
+Ensure you had [<span style="color:green">**REGISTER HEROKU**</span>](https://dashboard.heroku.com/) account.
 
+**Step 1: Install Heroku in your system**  
+In your bash terminal, install the Heroku CLI by running the following command:
+```
+sudo snap install heroku --classic
+```
 
+**Step 2: Install Dependencies**  
+We need to install a few dependencies so that our project can work on Heroku. Run each of the following commands one by one.  
+```
+sudo apt install libpq-dev python3-dev
+```
 
+And the following as well:  
+```
+sudo pip3 install gunicorn
+sudo pip3 install psycopg2
+sudo pip3 install Pillow
+sudo pip3 install whitenoise 
+sudo pip3 install dj_database_url
+```
 
+**Step 3: Add Whitenoise**  
+In the `settings.py` file, add Whitenoise to the middleware: 
+```
+MIDDLEWARE = [
+.....
+'whitenoise.middleware.WhiteNoiseMiddleware'
+]
+```
+<span style="color:red">**IT IS IMPORTANT THAT YOU DO NOT LEAVE OUT ANY OF THE DEPENDENCIES**</span>
 
+**Step 4: Create & Add Repository**  
+Go to git hub and create a repository or you can click this [**Link**](https://github.com/new).  
+In your own IDE terminal, type these commands to add the repository origin from Github:
+```
+git init 
+git add . 
+git commit -m "First commit" 
+git remote add origin https://github.com/*Username*/*Repository Name*
+```
 
-## Credits <a name="credits"></a>
-### Code
+**Step 5: Add Gitignore**  
+Create a hidden file named `.gitignore` and add `.c9` in the file. Also add the following django files to be ignored taken from [here](http://gitignore.io/api/django).
+
+**Step 6: Login To Heroku**  
+Log into Heroku using the following command:
+```
+heroku login -i
+```
+
+**Step 7: Create a Heroku App**  
+<span style="color:red">**!!! Make sure that you have logged into Heroku in your terminal !!!**</span>  
+Create a new unique APP NAME in Heroku then run these commands, replacing the `<APP NAME>` created in Heroku site:
+```
+heroku create <APP NAME> 
+```
+
+<br>
+
+## 9.0 Credits <a name="credits"></a>
+
+### 9.1 Code
 - [w3schools](https://www.w3schools.com/)
     - Grid Layout
     - Media Query
 
-### Images
+### 9.2 Images
 All images for this web site are being used under free commercial license from:
 - [ShutterStock](https://www.google.com.sg/)
 - [Unsplash](https://unsplash.com/)
 - [Imgur](https://imgur.com/)
 
 
-### Icons
+### 9.3 Icons
 FontAwesome
 - [Shopping Cart Icon](https://fontawesome.com/icons/shopping-cart?style=solid)
 
@@ -122,7 +179,7 @@ Icon8
 
 - [Bee Icon](https://icons8.com/icons/set/bee)
 
-### Fonts
+### 9.4 Fonts
 - [DM Serif Text](https://fonts.google.com/?query=DM+Serif+Text)
 - [EB Garamond](https://fonts.google.com/?query=EB+Garamond)
 - [Permanent Marker](https://fonts.google.com/?query=Permanent+Marker)
@@ -131,8 +188,12 @@ Icon8
 - [Kitchen](https://www.fontspace.com/west-wind-fonts/kitchen-kapers)
 - [HoneyFont](https://www.fontspace.com/kiddiefonts/save-the-honeybee)
 
-### Others
+### 9.5 Others
 - [Flash Message](https://docs.djangoproject.com/en/2.2/ref/contrib/messages/)
 - [Model Field Referance](https://docs.djangoproject.com/en/2.2/ref/models/fields/)
 - [Modal Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/)
 - [Bootstrap Validation](http://bootstrapvalidator.votintsev.ru/getting-started/)
+
+<br>
+![Bee Icon](https://img.icons8.com/officel/30/000000/bee.png) **Bee Happy, Have A Sweet Life.** ![Bee Icon](https://img.icons8.com/officel/30/000000/bee.png)  
+&emsp; **&copy; Golden Bee 2020 | Yi Sheng Lee**
