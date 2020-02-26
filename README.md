@@ -15,6 +15,32 @@
 ## Introduction <a name="introduction"></a>
 
 
+
+
+```Test
+dsdsdsds
+```
+
+## Deployment <a name="deployment"></a>
+The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/). <br>
+:heavy_exclamation_mark: Please have the following installed in your IDE environment before working on it :heavy_exclamation_mark:
+- [Python 3](https://docs.python.org/3/installing/index.html)
+- [Git](https://git-scm.com/downloads)
+
+The website is deployed using Heroku and the link is [Project 4 Golden Bee](https://golden-bee-honey.herokuapp.com/).
+
+
+### How to deploy the code locally
+If you wish to run this code locally then please follow the instructions below.
+1.	Download the code from the Github repository at [https://github.com/YiShengLee/Project3-Wine-Database](https://github.com/YiShengLee/Project3-Wine-Database).
+2.	Click on Clone or download then Download ZIP. This will download the code into a ZIP folder locally on your computer.
+3.	Uncompress the ZIP folder.
+4.	Copy all the file and load it into Visual Studio Code.
+    - Download Link:[Visual Studio Code](https://code.visualstudio.com/)
+
+![Github Clone Image](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/GitHub_clone.png)
+
+
 ## Credits <a name="credits"></a>
 ### Code
 - [w3schools](https://www.w3schools.com/)
