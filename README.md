@@ -17,12 +17,10 @@
 
 
 
-```Test
-dsdsdsds
-```
+
 
 ## Deployment <a name="deployment"></a>
-The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/). <br>
+The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/).  
 :heavy_exclamation_mark: Please have the following installed in your IDE environment before working on it :heavy_exclamation_mark:
 - [Python 3](https://docs.python.org/3/installing/index.html)
 - [Git](https://git-scm.com/downloads)
@@ -31,14 +29,53 @@ The website is deployed using Heroku and the link is [Project 4 Golden Bee](http
 
 
 ### How to deploy the code locally
-If you wish to run this code locally then please follow the instructions below.
-1.	Download the code from the Github repository at [https://github.com/YiShengLee/Project3-Wine-Database](https://github.com/YiShengLee/Project3-Wine-Database).
+If you wish to run this code locally, follow the instructions below:
+1.	Download the code from the Github repository at [https://github.com/YiShengLee/Golden-Bee-Shop](https://github.com/YiShengLee/Golden-Bee-Shop).
 2.	Click on Clone or download then Download ZIP. This will download the code into a ZIP folder locally on your computer.
 3.	Uncompress the ZIP folder.
 4.	Copy all the file and load it into Visual Studio Code.
-    - Download Link:[Visual Studio Code](https://code.visualstudio.com/)
+    - :arrow_down: Download Link: [Visual Studio Code](https://code.visualstudio.com/) :arrow_down:
 
 ![Github Clone Image](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/GitHub_clone.png)
+
+
+### Cloning from Github
+If you would like to clone this repository to your own IDE, follow the instructions below:
+
+
+
+**Step 1: Cloning Project**  
+Clone the project into your IDE with running the following command in the terminal, ensure you at project's directory in your terminal.
+
+```
+$ cd /home/user/*my_project*
+```
+
+```
+git init
+git clone https://github.com/YiShengLee/Golden-Bee-Shop.git
+```
+
+**Step 2: Installing Packages**  
+To install all the required packages, run this in your terminal.
+```
+pip3 install -r requirements.txt
+```
+
+**Step 3: Run a server**  
+To load the website, run this in your terminal.
+```
+python3 manage.py runserver 8080
+```
+
+**Step 4: Link to view project**  
+A window will pop up with a link. Click on the link to view the project.  
+  
+
+
+
+
+
 
 
 ## Credits <a name="credits"></a>
