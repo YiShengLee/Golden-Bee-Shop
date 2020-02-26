@@ -21,8 +21,8 @@ def calculate_cart_cost(request):
     amount = 0
     for id, quantity in cart.items():
         product = get_object_or_404(Product, pk=id)
-        amount = Product.price
-        print(amount)
+        amount += Product.price
+        
 
     return amount
 
