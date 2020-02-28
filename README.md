@@ -332,5 +332,5 @@ Icon8
 - [Bootstrap Validation](http://bootstrapvalidator.votintsev.ru/getting-started/)
 
 <br>
-![Bee Icon](https://img.icons8.com/officel/30/000000/bee.png) **Bee Happy, Have A Sweet Life.** ![Bee Icon](https://img.icons8.com/officel/30/000000/bee.png)  
-&emsp; **&copy; Golden Bee 2020 | Yi Sheng Lee**
+&emsp;**Bee Happy, Have A Sweet Life.**  
+**&copy; Golden Bee 2020 | Yi Sheng Lee**
