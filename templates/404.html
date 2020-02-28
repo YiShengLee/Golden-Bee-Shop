@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+404 Error
+{% endblock %}
+
+{% block content %}
+
+<div class="error_page" style="text-align:center;">
+  <h1>Sorry!</h1>
+  <h2>Something went wrong :(</h2>
+  <img src="{% static 'images/404.png'%}" alt="404 Error" />
+  <br />
+  <a href="{% url 'index' %}" class="btn btn-success">Click for Home Page</a>
+</div>
+
+
+{% endblock %}
