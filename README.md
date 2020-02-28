@@ -132,6 +132,58 @@ Create a new unique APP NAME in Heroku then run these commands, replacing the `<
 heroku create <APP NAME> 
 ```
 
+**Step 8: Check Heroku APP**  
+Heroku will add two origins to your git remotes. Do a check by running the following:
+```
+git remote -v
+```
+
+**Step 9: Copy Enuvronment to Heroku**  
+1. Open you `.bashrc` file in AWS Cloud9.
+2. Login to Heroku in browser: [http://www.heroku.com](http://www.heroku.com).
+3. Select your app in the dashboard.
+4. Click on settings.
+5. Click on Real Config Vars
+6. Copy the exported variables in .bashrc over to the Config Vars and <span style="color:red">**omit the quotes**</span>. See the example below!
+
+![Heroku Settings](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/heroku_settings.PNG)
+
+**Step 10: Create Procfile**  
+Be in the root directory and run the command:
+```
+echo web: python app.py > Procfile
+```
+A file name `Procfile` will be created 
+
+![Procfile](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/Procfile.PNG)
+
+**Step 11: Add Command to Procfile**  
+Open the Procfile, and enter the following and replace <PROJECT_FOLDER> with the name of your project folder (i.e, the **FOLDER** that contains the `settings.py` file)
+```
+web: gunicorn <PROJECT_FOLDER>.wsgi:application
+```
+
+**Step 12: Update ALLOWED_HOSTS**  
+Add the domain name (**AND JUST THE DOMAIN NAME ONLY.** i.e without the HTTPS) of the heroku app into the ALLOWED_HOST inside settings.py 
+(you can check by going to the app inside your Heroku dashboard, then click the [Open App] button on the upper right corner of the screen).
+
+In the `settings.py`  
+```
+ALLOWED_HOSTS = ["golden-bee-honey.herokuapp.com", "*"]
+```
+
+**Step 13: Ensure all secret key information and sensitive data should be placed in `env.py` and linked to the `settings.py` file.**  
+```
+os.environ.setdefault("STRIPE_PUBLISHABLE", "") 
+os.environ.setdefault("STRIPE_SECRET", "") 
+os.environ.setdefault("DATABASE_URL", "") 
+os.environ.setdefault("SECRET_KEY", "") 
+os.environ.setdefault("AWS_SECRET_KEY_ID", "") 
+os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "")
+```
+
+
+
 <br>
 
 ## 9.0 Credits <a name="credits"></a>
