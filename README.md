@@ -182,7 +182,92 @@ os.environ.setdefault("AWS_SECRET_KEY_ID", "")
 os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "")
 ```
 
+**Step 14: Generate Requirements.txt**  
+We need a requirements.txt file in our Git repository so that Heroku will know what packages install.  
+```
+pip3 freeze --local > requirements.txt
+```
 
+**Step 15: Add Static Root**
+Add the following in the `settings.py` file for static files and uploads <span style="color:red">**[required steps for whitenoise to work]**</span>.
+```
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+Example:
+```
+{% load static %}
+<img src="{% static "images/hi.jpg" %}" alt="Hi!" />
+
+<!-- DON'T WRITE THIS -->
+<img src="/static/images/hi.jpg" alt="Hi!" />
+```
+
+**Step 16: Deploy**  
+Make sure you had commit your code to your git repository!
+```
+git add . 
+git commit -m "Deploying to Heroku" 
+git push heroku master
+```
+
+**Step 17: Create a database for your Heroku app**  
+Inside the bash terminal, after making sure you have <span style="color:red">**logged in**</span>, type in and run the following command:
+```
+heroku addons:create heroku-postgresql
+```
+
+**Step 18: Check database URL**  
+Check the urls of the database you have created, type in the command:
+```
+heroku config
+```
+
+**Step 19: Add the url to .bashrc**  
+Modify your `.bashrc` file to add in the DATABASE_URL setting:
+```
+export DATABASE_URL="database_url"
+```
+<span style="color:red">**Restart your bash terminal!**</span>
+
+**Step 20: Change your database settings**  
+First import `dj_database_url` after the other import statements in `settings.py`
+```
+import dj_database_url
+```
+Comment out your existing `DATABASES` setting in `settings.py` and replace it as shown below:
+```
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASES = {'default': dj_database_url.parse(os.environ["DATABASE_URL"])}
+```
+
+**Step 21: Make migrations**  
+Make sure you have restarted your terminal. Make migrations with this command:
+```
+python3 manage.py migrate
+```
+
+**Step 22: Final Commit**  
+Commit all files to Heroku using this command:
+```
+git add . 
+git commit -m "Updated settings.py" 
+git push heroku master
+```
+
+**Step 23: Create a SuperUser**  
+Since we have switched to a new database, it won't have any old date, so we have to create the super user once more.
+```
+python3 manage.py createsuperuser
+```
+
+**Step 24: Load Heroku App**  
+At the very top of the page in Heroku, click "Open App". You will now be able to view the project in Heroku
 
 <br>
 
