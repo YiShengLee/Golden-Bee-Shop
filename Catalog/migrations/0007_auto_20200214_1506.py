@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='Category',
-            field=models.ForeignKey(default='Select type of honey', null=True, on_delete=django.db.models.deletion.SET_NULL, to='Catalog.Category', verbose_name='Type of Honey'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='Catalog.Category', verbose_name='Type of Honey'),
         ),
     ]
