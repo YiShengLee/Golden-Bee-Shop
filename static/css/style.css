@@ -76,9 +76,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
+.navbar-light .navbar-nav .nav-link{
     font-family: 'Permanent Marker';
     font-size: 25px;
+}
+
+.navbar-light .navbar-brand{
+    font-family: 'EB Garamond';
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(158,128,37);
+}
+
+.navbar-light .navbar-brand:hover{
+    color: rgb(158,128,37);
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
@@ -140,6 +151,9 @@
     }
     .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
         font-size: 15px;
+    }
+    .navbar-light .navbar-brand{
+        font-size: 10px;
     }
     .fa-facebook:hover,.fa-linkedin-in:hover,.fa-github:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-pinterest:hover{
         font-size:20px;
