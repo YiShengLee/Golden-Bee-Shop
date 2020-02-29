@@ -10,16 +10,31 @@ View Cart
 <div class="CartTitle pageheader">{{request.user.username}}'s Cart</div>
 {% endif %}
 
-<ul>
-    {%for id, i in shopping_cart.items %}
-        <li>
-            {{i.name}}<br/>
-            ${{i.price}}
-        </li>
-        <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</i></a>
-    {%endfor%}
-</ul>
-
-<a href="{% url 'checkout' %}" class="btn btn-success">Checkout</i></a>
+<div class="container">
+    <section>
+    
+    <!--Display when cart is empty-->
+    {%for i in shopping_cart.items %} 
+    {% empty %}
+    <div class="empty_cart">
+        <h3>Your Cart is empty :(</h3>
+        <img src="{% static 'images/emptycart.png'%}" id="empty" alt="Empty Cart" /> 
+    </div>
+    {% endfor %}
+    
+    <ul>
+        {%for id, i in shopping_cart.items %}
+            <li>
+                {{i.name}}<br/>
+                ${{i.price}}
+            </li>
+            <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</i></a>
+        {%endfor%}
+    </ul>
+    
+    <a class="btn btn-success btnSC shopping" id="shopping" href="{% url 'show_products' %}"><i class="fas fa-shopping-cart"></i></i> BACK TO SHOP</a>
+    <a class="btn btn-warning btnSC checkout" id="checkout" href="{% url 'checkout' %}" ><i class="fas fa-money-bill-alt"></i> Checkout</a>
+    </section>
+</div>
 
 {% endblock %}

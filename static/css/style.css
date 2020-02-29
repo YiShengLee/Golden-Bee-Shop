@@ -85,6 +85,12 @@
     color:rgb(224,162,0);
 }
 
+/*All button Section*/
+.btnSC{
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
 /*Back Button Section*/
 .bk-btn {
   height: 52px;
@@ -309,7 +315,29 @@ src: url("/static/fonts/Kitchen.ttf");
 
 .CartTitle{
     text-transform: capitalize;
+    margin-bottom: 2rem;
 }
+
+.empty_cart{
+    text-align: center;
+}
+
+.empty_cart img{
+    width: 60%;
+    margin: auto;
+}
+
+.shopping, .checkout{
+    width: 100%;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+
+
 
 /*================== Members Section ==================*/
 .c4{

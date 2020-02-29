@@ -1,3 +1,11 @@
+// Hide Button Section
+let honey = document.querySelector("#empty");
+let checkout = document.querySelector("#checkout");
+
+if (honey){
+    checkout.style.display = "none";
+}
+
 $("document").ready(function(){
     setTimeout(function(){
         $("div.alert").remove();
@@ -5,7 +13,9 @@ $("document").ready(function(){
 
 });
 
+// Carousel Interval Speed
 $('.carousel').carousel({
     interval: 4000,
     pause: "hover"
 })
+
