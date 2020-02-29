@@ -16,7 +16,7 @@
 
 
 ## 7.0 Deployment <a name="testing"></a>
-A full testing process can be found in a separate [tests.md](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/test.md) file.
+A full testing process can be found in a separate [tests.md](https://github.com/YiShengLee/Golden-Bee-Shop/blob/master/tests.md) file.
 
 
 
