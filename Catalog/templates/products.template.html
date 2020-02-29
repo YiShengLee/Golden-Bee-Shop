@@ -4,6 +4,7 @@
 Products
 {% endblock %}
 
+{% load crispy_forms_tags %}
 {% block content %}
 <!--Page Title-->
 <div class="pageheader"><img src="{% static 'images/Banner.png'%}"> Honey Products</div> <br>
@@ -12,6 +13,12 @@ Products
 
 <div class="container">
     
+    <form method='GET'>
+    {{ search_form|crispy}}
+    <input type='submit' value='Search'/>
+    </form>
+    
+  
     <!--Add new product Section-->
     {% if user.is_authenticated and user.is_superuser %}
     <a href="{% url "create_product" %}" class="btn"><button>Add Product</button></a>

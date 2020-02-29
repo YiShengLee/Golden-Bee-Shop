@@ -57,3 +57,6 @@ class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ('name',)
+        
+class CategorySearchForm(forms.Form):
+    search_terms = forms.CharField(required=False)

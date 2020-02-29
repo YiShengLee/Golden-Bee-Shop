@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
-from .forms import ProductForm, CategoryForm
+from .forms import ProductForm, CategoryForm, CategorySearchForm
 from .models import Product, Category
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -10,9 +10,13 @@ def index(request):
 
 # Show Product Section
 def show_products(request):
+    form = CategorySearchForm()   
     all_products = Product.objects.all()
+    if request.GET.get('search_terms'):
+        all_products = all_products.filter(Category__name__contains=request.GET.get('search_terms'))
     return render(request,'products.template.html',{
-        'catalog':all_products
+        'catalog':all_products,
+        'search_form':form
     })
 
 # Create Product Section
@@ -88,3 +92,18 @@ def create_category(request):
         else:
             print(create_cat.errors)
             return HttpResponse("Error")
+            
+# def search(request):
+#     print("HELLO")
+#     form = CategorySearchForm()
+#     categories = Category.objects.all()
+#     # if there are search terms
+#     if request.GET.get('search_terms'):
+#         categories = categories.filter(title__contains=request.GET.get('search_terms'))
+
+    
+#     return render(request, 'products.template.html', {
+#         'categories':categories,
+#         'search_form':"ABCDEFG",
+#         'data':"test"
+#     })
