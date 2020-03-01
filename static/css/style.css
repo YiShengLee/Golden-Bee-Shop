@@ -370,9 +370,9 @@ src: url("/static/fonts/Kitchen.ttf");
 
 .table td, .table th{
     vertical-align: middle;
-    text-align: left;
+    text-align: center;
+    width: auto;
 }
-
 
 
 
