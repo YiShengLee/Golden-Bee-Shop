@@ -16,7 +16,9 @@ def add_to_cart(request, id):
             'id':id,
             'name': honey.name,
             'price': str(honey.price),
-            # 'image_url':honey.image.cdn_url,
+            'image_url':honey.image.cdn_url,
+            'quantity':1,
+            'total_price':float(honey.price),
             }
         
         # save the cart back to sessions
@@ -26,6 +28,8 @@ def add_to_cart(request, id):
 
         
     else:
+        cart[id]['quantity']+=1
+        cart[id]['total_price'] = round(int(cart[id]['quantity']) * float(cart[id]['price']),2)
         request.session['shopping_cart'] = cart
         return redirect('/cart/')
 
@@ -35,10 +39,30 @@ def view_cart(request):
     # retrieve the cart
     cart = request.session.get('shopping_cart', {})
     
+    # grand_total_price = 0.00
+    # for id,honey in cart.items():
+    #     grand_total_price += honey['total_price']
+    
     return render(request, 'view_cart.template.html', {
-        'shopping_cart':cart
+        'shopping_cart':cart,
+        # 'grand_total_price':round(grand_total_price, 2)
     })
 
+def total_price(request,id):
+    honey = get_object_or_404(Product, pk=id)
+    cart = request.session.get('shopping_cart', {})
+    cart[id] = {
+    'id':id,
+    'name': honey.name,
+    'price': str(honey.price),
+    'image_url':honey.image.cdn_url,
+    'quantity':cart['quantity'],
+    'total_price':round(int(cart[id]['quantity']) * float(cart[id]['price']),2)
+    }
+    request.session['shopping_cart'] = cart
+    return render(request, 'view_cart.template.html', {
+            'total_price':total_price
+        })        
     
 # Remove item from cart
 def delete_from_cart(request, id):

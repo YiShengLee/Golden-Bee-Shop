@@ -350,7 +350,16 @@ src: url("/static/fonts/Kitchen.ttf");
     margin-bottom: 1rem;
 }
 
+/*Trash Icon*/
+.fa-trash-alt{
+    font-size: 30px;
+    color: red;
+}
 
+.h_font{
+    font-family: 'Sriracha';
+    text-transform: uppercase;
+}
 
 
 /*================== Members Section ==================*/

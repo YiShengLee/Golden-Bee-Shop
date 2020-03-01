@@ -22,19 +22,54 @@ View Cart
     </div>
     {% endfor %}
     
-    <ul>
-        {%for id, i in shopping_cart.items %}
-            <li>
-                {{i.name}}<br/>
-                ${{i.price}}
-            </li>
-            <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</i></a>
-        {%endfor%}
-    </ul>
+    <!--<ul>-->
+    <!--    {%for id, i in shopping_cart.items %}-->
+    <!--        <li>-->
+    <!--            {{i.name}}<br/>-->
+    <!--            ${{i.price}}-->
+    <!--        </li>-->
+    <!--        <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</a>-->
+    <!--    {%endfor%}-->
+    <!--</ul>-->
+    
+    <!--Medium screen and above-->
+    <div class="row d-none d-md-block">
+        <table class="cart table">
+          <tr>
+            <th class="col">Image</th>
+            <th class="col">Honey Brand</th>
+            <th class="col">Quantity</th>
+            <th class="col">Price</th>
+            <th class="col">Subtotal</th>
+            <th class="col"></th>
+          </tr>
+          <!--Display all the informations-->
+          {%for id, honey in shopping_cart.items %}
+          <tr>
+            <td class="honey img"><a href=""><img src="{{honey.image_url}}-/resize/100x150/-/quality/lightest/" alt="{{honey.name}}'s Brand"/></a></td>
+            <td class="h_font">{{honey.name}}</td>
+            <td class="tg-0lax">{{honey.quantity}}</td>
+            <td class="h_font">${{honey.price}}</td>
+            <td class="tg-0lax">${{honey.total_price|floatformat:2}}</td>
+            <td class="tg-0lax"><a href="{% url 'delete_from_cart' id=id %}"><i class="fas fa-trash-alt"></i></a></td>
+          </tr>
+          {%endfor%}
+          
+          <tr>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax" colspan="3"></td>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax"></td>
+          </tr>
+        </table>
+    </div>
     
     <a class="btn btn-success btnSC shopping" id="shopping" href="{% url 'show_products' %}"><i class="fas fa-shopping-cart"></i></i> BACK TO SHOP</a>
     <a class="btn btn-warning btnSC checkout" id="checkout" href="{% url 'checkout' %}" ><i class="fas fa-money-bill-alt"></i> Checkout</a>
     </section>
 </div>
+
+
+
 
 {% endblock %}
