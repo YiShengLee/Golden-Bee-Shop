@@ -38,13 +38,13 @@ def add_to_cart(request, id):
 def view_cart(request):
     # retrieve the cart
     cart = request.session.get('shopping_cart', {})
-    # grand_total_price = 0.00
-    # for id,honey in cart.items():
-    #     grand_total_price += honey['total_price']
+    grand_total_price = 0.00
+    for id,honey in cart.items():
+        grand_total_price += honey['total_price']
     
     return render(request, 'view_cart.template.html', {
         'shopping_cart':cart,
-        # 'grand_total_price':round(grand_total_price, 2)
+        'grand_total_price':round(grand_total_price, 2)
     })
 
 def total_price(request,id):
