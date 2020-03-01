@@ -48,10 +48,14 @@ View Cart
           <tr>
             <td class="honey img"><a href=""><img src="{{honey.image_url}}-/resize/100x150/-/quality/lightest/" alt="{{honey.name}}'s Brand"/></a></td>
             <td class="h_font">{{honey.name}}</td>
-            <td class="tg-0lax">{{honey.quantity}}</td>
+            <td class="h_font">
+                <a href="{% url 'minus_from_cart' id=id %}"><i class="fas fa-minus mr-2"></i></a> 
+                {{honey.quantity}}
+                <a href="{% url 'add_to_cart' id=id %}"><i class="fas fa-plus ml-2"></i>
+            </td>
             <td class="h_font">${{honey.price}}</td>
-            <td class="tg-0lax">${{honey.total_price|floatformat:2}}</td>
-            <td class="tg-0lax"><a href="{% url 'delete_from_cart' id=id %}"><i class="fas fa-trash-alt"></i></a></td>
+            <td class="h_font">${{honey.total_price|floatformat:2}}</td>
+            <td><a href="{% url 'delete_from_cart' id=id %}"><i class="fas fa-trash-alt"></i></a></td>
           </tr>
           {%endfor%}
           

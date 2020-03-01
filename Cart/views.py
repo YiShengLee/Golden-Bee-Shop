@@ -38,7 +38,6 @@ def add_to_cart(request, id):
 def view_cart(request):
     # retrieve the cart
     cart = request.session.get('shopping_cart', {})
-    
     # grand_total_price = 0.00
     # for id,honey in cart.items():
     #     grand_total_price += honey['total_price']
@@ -63,6 +62,19 @@ def total_price(request,id):
     return render(request, 'view_cart.template.html', {
             'total_price':total_price
         })        
+
+def minus_from_cart(request, id):
+    cart = request.session.get('shopping_cart', {})
+    if id in cart:
+        game = get_object_or_404(Product, pk=id) 
+        if cart[id]['quantity'] > 1:
+            cart[id]['quantity']-=1
+            print(cart[id]['quantity'])
+            cart[id]['total_price'] = round(int(cart[id]['quantity']) * float(cart[id]['price']),2)
+        # save the cart back to sessions
+            request.session['shopping_cart'] = cart
+        return redirect('/cart/')
+
     
 # Remove item from cart
 def delete_from_cart(request, id):
