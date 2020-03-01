@@ -453,6 +453,20 @@ hr.divider {
     height: 100%;
 }
 
+/*Password reset Section*/
+.reset_password{
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px grey;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+.reset{
+    width: 100%;
+    margin-top: 10px;
+}
+
 
 /*================== Media Query Section ==================*/
 
@@ -488,7 +502,7 @@ hr.divider {
     h1{
         font-size: 2rem;
     }
-    .change_password{
+    .change_password, .reset_password{
         margin: 50px auto;
     }
 }
