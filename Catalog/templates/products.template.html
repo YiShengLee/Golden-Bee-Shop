@@ -66,38 +66,38 @@ Products
                               <div class="card-body">
                                   {{product.description}}
                                   <div class="findOut pt-3">
-                                      <a class="btn btn-success" href="">Find Out More</a>
+                                      <a class="btn btn-success" href="{% url "honey_info" id=product.id %}">Find Out More</a>
                                   </div>
                               </div>
                           </div>
                         </div>
                     </div>
                     
-            {% if user.is_authenticated and user.is_superuser %}
-            <!--Edit Button-->
-            <a href='{% url "edit_product" id=product.id %}' class="btn btn-success m-2 p-2">&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
-            
-            <!--Delete Button-->
-            <!--<a href='{% url "delete_product" id=product.id %}'>Delete</a> -->
-            
-            <a data-toggle="modal" data-target=".bd-4-modal-md" title="Delete wine information">
-                <button id="delete" class="btn btn-danger m-2 p-2">Delete</button>
-            </a>
-            <div class="modal fade bd-4-modal-md" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span>Are you sure you want to delete <span>{{product.name}}</span>?</span>
-                            <button type="button" id="closex" data-dismiss="modal">Close &times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <a class="btn btn-warning" href="{% url "show_products" %}">NO</a>
-                            <a class='btn btn-danger' href="{% url "delete_product" id=product.id %}">YES</a>
+                    {% if user.is_authenticated and user.is_superuser %}
+                    <!--Edit Button-->
+                    <a href='{% url "edit_product" id=product.id %}' class="btn btn-success m-2 p-2">&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
+                    
+                    <!--Delete Button-->
+                    <!--<a href='{% url "delete_product" id=product.id %}'>Delete</a> -->
+                    
+                    <a data-toggle="modal" data-target=".bd-4-modal-md" title="Delete wine information">
+                        <button id="delete" class="btn btn-danger m-2 p-2">Delete</button>
+                    </a>
+                    <div class="modal fade bd-4-modal-md" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span>Are you sure you want to delete <span>{{product.name}}</span>?</span>
+                                    <button type="button" id="closex" data-dismiss="modal">Close &times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <a class="btn btn-warning" href="{% url "show_products" %}">NO</a>
+                                    <a class='btn btn-danger' href="{% url "delete_product" id=product.id %}">YES</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {%endif%}
+                    {%endif%}
                     
                 </div>
             </div>
