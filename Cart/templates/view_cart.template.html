@@ -22,15 +22,6 @@ View Cart
     </div>
     {% endfor %}
     
-    <!--<ul>-->
-    <!--    {%for id, i in shopping_cart.items %}-->
-    <!--        <li>-->
-    <!--            {{i.name}}<br/>-->
-    <!--            ${{i.price}}-->
-    <!--        </li>-->
-    <!--        <a href="{% url 'delete_from_cart' id=id %}" class="btn btn-danger">Delete</a>-->
-    <!--    {%endfor%}-->
-    <!--</ul>-->
     
     <!--Medium screen and above-->
     <div class="row d-none d-md-block">
@@ -71,9 +62,11 @@ View Cart
           </tbody>
         </table>
     </div>
-    
-    <a class="btn btn-success btnSC shopping" id="shopping" href="{% url 'show_products' %}"><i class="fas fa-shopping-cart"></i></i> BACK TO SHOP</a>
-    <a class="btn btn-warning btnSC checkout" id="checkout" href="{% url 'checkout' %}" ><i class="fas fa-money-bill-alt"></i> Checkout</a>
+    <form method='GET' action="{% url 'charge' %}">
+      <input type='number' name='amount' class='form-control' value="{{grand_total_price}}" style="display:none;" />
+      <a class="btn btn-success btnSC shopping" id="shopping" href="{% url 'show_products' %}"><i class="fas fa-shopping-cart"></i></i> BACK TO SHOP</a>
+      <button><a class="btn btn-warning btnSC checkout" id="checkout"><i class="fas fa-money-bill-alt"></i> Checkout</a></button>
+    </form>
     </section>
 </div>
 

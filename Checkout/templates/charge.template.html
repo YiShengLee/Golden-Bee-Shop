@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Charge
+{% endblock %}
+
+
+
+{% block footer_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+
+{% load crispy_forms_tags %} 
+{% block content %}
+
+<div class="checkout_form">
+    <form role="form" method="POST" id="payment-form">
+        <legend>Payment Details</legend>
+        <div class='alert alert-danger' id='credit-card-errors' style='display:none'>
+            <p id='stripe-error-message'></p>
+        </div>
+
+        <!--Combining these 2 forms as one view-->
+        <div class="form-group col-md-6">
+            {{ order_form | crispy }}
+        </div>
+
+        <div class="form-group col-md-6">
+            {{ payment_form | crispy }}
+        </div>
+
+        {% csrf_token %}
+
+        <input type='hidden' value='{{amount}}' name='amount' />
+
+        <div class="form-group col-md-12">
+            <input class=" btn btn-warning mt-4" id="submit_payment_btn" name="commit" type="submit" value="SUBMIT PAYMENT">
+            <a href="{% url 'view_cart' %}" class="btn btn-success add_to_cart mt-3"><i class="fas fa-shopping-cart"></i> BACK TO CART</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
