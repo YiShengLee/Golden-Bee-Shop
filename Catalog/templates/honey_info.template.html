@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Product Information
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="pageheader">Honey Information</div>
+    <section class="game_info">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{honey.image.cdn_url}}" class="card-img" alt="Fun party boardgame {{honey.name}} cardboard box">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Brand: {{honey.name}}</h2>
+                        <span class="card-text">Price: SGD ${{honey.price}}</span>
+                        <br/>
+                        <br/>
+                        <p class="card-text">Category: {{honey.Category}}</p>
+                        <br/>
+                        <p class="card-text">Honey description: </p>
+                        <p>{{honey.description|linebreaks}}</p>
+                        <div class="game_info_links">
+                            <!--Edit Product Button-->
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <a href="{% url "edit_product" id=honey.id %}" class="btn btn-outline-danger more_info"><i class="fas fa-pencil-alt"></i> EDIT GAME</a> 
+                            {% endif %}
+                            <!--Add Cart Button-->
+                            <a href="{% url 'add_to_cart' id=honey.id %}" class="btn btn-success add_to_cart"><i class="fas fa-location-arrow"></i> ADD TO CART</a>
+                            <!--View Cart Button-->
+                            <a href="{% url 'view_cart' %}" class="btn btn-warning add_to_cart"><i class="fas fa-shopping-cart"></i> VIEW CART</a>
+                            <!--Show Product Button-->
+                            <a href="{% url 'show_products' %}" class="btn btn-info"><i class="fas fa-store"></i> BACK TO SHOP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -70,11 +70,6 @@
     font-size: 35px;
 }
 
-.pageheader{
-    font-size: 50px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-}
 
 .navbar-light .navbar-nav .nav-link{
     font-family: 'Permanent Marker';
@@ -132,33 +127,7 @@
 }
 /*End of Back Button Section*/
 
-@media only screen and (max-width: 767px){
-    
-}
 
-@media only screen and (max-width: 426px) {
-    .fab{
-        font-size: 20px;
-    }
-    .foot{
-        font-size:small;
-    }
-    .foot img{
-        height: 20px;
-    }
-    .icon{
-        height:30px;
-    }
-    .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
-        font-size: 15px;
-    }
-    .navbar-light .navbar-brand{
-        font-size: 10px;
-    }
-    .fa-facebook:hover,.fa-linkedin-in:hover,.fa-github:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-pinterest:hover{
-        font-size:20px;
-    }
-}
 
 
 
@@ -293,6 +262,8 @@
 .pageheader{
     text-align: center;
     font-family: Honeyfont;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .brand{
@@ -448,3 +419,33 @@ hr.divider {
     text-align: center;
 }
 
+@media only screen and (max-width: 767px){
+    
+}
+
+@media only screen and (max-width: 426px) {
+    .fab{
+        font-size: 20px;
+    }
+    .foot{
+        font-size:small;
+    }
+    .foot img{
+        height: 20px;
+    }
+    .icon{
+        height:30px;
+    }
+    .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand{
+        font-size: 15px;
+    }
+    .navbar-light .navbar-brand{
+        font-size: 10px;
+    }
+    .fa-facebook:hover,.fa-linkedin-in:hover,.fa-github:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-pinterest:hover{
+        font-size:20px;
+    }
+    .pageheader{
+        font-size: 25px;
+    }
+}

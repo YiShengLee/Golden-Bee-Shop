@@ -93,17 +93,8 @@ def create_category(request):
             print(create_cat.errors)
             return HttpResponse("Error")
             
-# def search(request):
-#     print("HELLO")
-#     form = CategorySearchForm()
-#     categories = Category.objects.all()
-#     # if there are search terms
-#     if request.GET.get('search_terms'):
-#         categories = categories.filter(title__contains=request.GET.get('search_terms'))
-
-    
-#     return render(request, 'products.template.html', {
-#         'categories':categories,
-#         'search_form':"ABCDEFG",
-#         'data':"test"
-#     })
+def honey_info(request, id):
+    honey = get_object_or_404(Product, pk=id)
+    return render(request, 'honey_info.template.html', {
+        'honey':honey
+    })  
