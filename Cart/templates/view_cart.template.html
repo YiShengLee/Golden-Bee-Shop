@@ -63,14 +63,12 @@ View Cart
         </table>
     </div>
     <form method='GET' action="{% url 'charge' %}">
-      <input type='number' name='amount' class='form-control' value="{{grand_total_price}}" style="display:none;" />
+      <input type='number' name='amount' class='form-control' value="{{grand_total_price}}" style="display:none;"/>
       <a class="btn btn-success btnSC shopping" id="shopping" href="{% url 'show_products' %}"><i class="fas fa-shopping-cart"></i></i> BACK TO SHOP</a>
-      <button><a class="btn btn-warning btnSC checkout" id="checkout"><i class="fas fa-money-bill-alt"></i> Checkout</a></button>
+      <button class="btn btn-warning btnSC checkout" id="checkout"><a><i class="fas fa-money-bill-alt"></i> Checkout</a></button>
     </form>
     </section>
 </div>
-
-
 
 
 {% endblock %}
