@@ -314,6 +314,23 @@ font-family: "kitchen";
 src: url("/static/fonts/Kitchen.ttf");
 }
 
+/*Search button*/
+.search{
+    background-color: rgb(177,156,47);
+    border-color: rgb(177,156,47);
+}
+
+.search:hover{
+    background-color: rgb(226,197,67);
+    border-color: rgb(226,197,67);
+}
+
+#div_id_search_terms{
+    font-family: 'EB Garamond';
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
 /*================== Checkout Section ==================*/

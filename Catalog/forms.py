@@ -59,4 +59,4 @@ class CategoryForm(forms.ModelForm):
         fields = ('name',)
         
 class CategorySearchForm(forms.Form):
-    search_terms = forms.CharField(required=False)
+    search_terms = forms.CharField(required=False, label='Search your favourite honey')

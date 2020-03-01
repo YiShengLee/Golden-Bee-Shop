@@ -13,10 +13,12 @@ Products
 
 <div class="container">
     
-    <form method='GET'>
+    <form method='GET' class="mb-3">
     {{ search_form|crispy}}
-    <input type='submit' value='Search'/>
+    <input class="btn btn-info search" type='submit' value='Search'/>
+    <a href="{% url "show_products" %}" class="btn btn-secondary ml-2">Clear <i class="far fa-window-close"></i></a>
     </form>
+    
     
   
     <!--Add new product Section-->
