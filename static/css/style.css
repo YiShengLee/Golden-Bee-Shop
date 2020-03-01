@@ -325,6 +325,11 @@ src: url("/static/fonts/Kitchen.ttf");
     height: 200px;
 }
 
+.buy{
+    margin-top: 2rem;
+    padding: 2px;
+}
+
 /*================== Cart Section ==================*/
 
 .CartTitle{

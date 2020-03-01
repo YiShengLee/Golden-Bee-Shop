@@ -7,13 +7,13 @@ Checkout Success
 {% block content %}
 
 <div class="checkout_success">
-<div class="tick">
+    <div class="tick">
+        <img src="{% static 'images/tick.jpg'%}"></img>
+        <h1>Thank you for your purchase!</h1>
+    </div>
+    <a href="{% url 'show_products' %}" class="btn btn-primary buy">Click here to buy more!</a>
 
-<img src="{% static 'images/tick.jpg'%}"></img>
-<h1>Thank you for your purchase!</h1>
 </div>
-</div>
-
 
 
 {% endblock %}
