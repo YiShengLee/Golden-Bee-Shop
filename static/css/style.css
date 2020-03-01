@@ -419,7 +419,7 @@ hr.divider {
     text-align: center;
 }
 
-
+/*Change password Section*/
 .change_password{
     border: 1px solid black;
     border-radius: 25px;
@@ -431,6 +431,26 @@ hr.divider {
 .change{
     width: 100%;
     margin-top: 10px;
+}
+
+/*Password change success*/
+.password_change_done {
+    text-align: center;
+}
+
+.password_change_done h2 {
+    margin-top: 10px;
+}
+
+.password_change_done img {
+    margin-top: 10px;
+    width: 60%;
+}
+
+.password_change_done a {
+    margin-top: 10px;
+    width: 60%;
+    height: 100%;
 }
 
 
