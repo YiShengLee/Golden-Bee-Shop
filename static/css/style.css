@@ -414,10 +414,40 @@ hr.divider {
 }
 
 
+/*.c5{*/
+/*    background-color: rgb(112,155,189);*/
+/*    text-align: center;*/
+/*}*/
+
 .c5{
-    background-color: rgb(112,155,189);
-    text-align: center;
+    background-color: rgb(112,155,189,0.5);
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px grey;
+    margin: 20px auto;
+    padding: 20px;
+    height: 40rem;
 }
+
+.c5 img{
+    height:150px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.login a{
+    color: orange;
+}
+
+.login a, .logins{
+    width: 100%;
+}
+
+.login .forgot_password {
+    color: white;
+}
+
 
 /*Change password Section*/
 .change_password{
