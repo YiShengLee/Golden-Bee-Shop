@@ -419,6 +419,23 @@ hr.divider {
     text-align: center;
 }
 
+
+.change_password{
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px grey;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+.change{
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/*================== Media Query Section ==================*/
+
 @media only screen and (max-width: 767px){
     
 }
@@ -447,5 +464,11 @@ hr.divider {
     }
     .pageheader{
         font-size: 25px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .change_password{
+        margin: 50px auto;
     }
 }
