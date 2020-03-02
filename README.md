@@ -188,7 +188,12 @@ Here are a list of programming languages, frameworks, technologies and tools use
 |[Sqlite3](https://www.sqlite.org/index.html)   | SQLite3 was used to store database and retrieve data via the backend. |
 |[Adobe Photoshop](https://www.adobe.com/products/photoshop.html)   | Used to create image for all the README.md file |
 
-
+## 7.0 Future Features to Implement <a name="implement"></a>
+1. GST Fees
+2. Delivery Charges
+3. Videos
+4. Label
+5. Pagination
 
 
 ## 8.0 Testing <a name="testing"></a>
