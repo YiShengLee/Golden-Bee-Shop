@@ -1,4 +1,8 @@
-# <span style="color:rgb(224,162,0)">Golden Bee Shop [Project 4]</span>
+# <span style="color:rgb(224,162,0)">Golden Bee Store</span>
+Project 4: FullStack Final Project
+Done by: Lee Yi Sheng
+
+
 ## Table of contents
 1. #### [Introduction](#introduction)
 2. #### [User Stories](#userstories)
