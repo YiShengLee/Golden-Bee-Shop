@@ -57,6 +57,35 @@ As a user, someone who like to buy raw and organic honey and found this website.
 - Normal user & and superuser able to add honey product to cart, checkout and make payment with credit card
 - The ability to register an account, login, logout, change password, reset password and view my profile details
 
+## 3.0 UX <a name="UX"></a>  
+**User Experience**  
+This project I started with mobile first design approach. 
+I started creating mockups wireframe on powerpoint for mobile only. 
+The design of the site is fully design by myself, showcasing smooth 
+layout and interactive for most devices. Milstones had to be set in 
+order to finish this project Below are steps by steps of the journey 
+that required to be achieved for this website.
+
+1. User are welcomed with a simple and refreshing front page with caurosel image. A slogan is shown on each picture.
+2. Eye-catching icon of all the buttons to further enhance the website's purpose.
+3. On larger screens, there are options on top of the navigation page for easy navigation. On smaller screens, a hamburger will be formed on the right hand side of the website.
+4. A search function is provided on top the product section t0 enable users to search for honey product by name or category.
+5. If the user venture into a invalid section of the website, a error page will display.
+6. Flash messages are displayed on top of the home page (below the navbar) for certain successful or not successful actions such as adding to cart, removing from cart, logged in, etc.
+7. Users are able to add honey product to cart if they would like to purchase it.
+8. In the 'cart' page, a display of honey is available. Users are able to add or reduce the quantities they would like to buy. Grand total amount will be automated calculated and display the amount.
+9. If the user clicks on the 'PROCEED TO CHECKOUT' button, a form is displayed asking for the user to fill in the particulars for delivery. On the click of the 'SUBMIT PAYMENT' button, payment is made and this is verified with a 'tick" image when payment is successful.
+10. For superusers, a form is provided in the 'Add Product' page where the user could fill up and add a honey product to the catalogue. The asterisks (*) imply that the fields are required to be filled before form submission.
+11. User are required to fills in all the fields and select a image to upload upon clicking on the "Add Product" button, user will then be brought to the "shop" page where the latest added honey product will be displayed. Do note that each image upload must not **exceed** 1MB to be able to upload the image successfully.
+12. To view more information of a honey product, click on the picture or click "more description" button.
+13. If user would like to edit product, click on the "Edit honey" button to display the form and edit the information and submit. The honey product edited will then be updated.
+14. The edit form is pre-filled with the original entries of the user for easy reference. Ensure to click the submit button to ensure your new information is saved.
+15. User could also delete the honey product by clicking on the "Delete" button. A modal pop-up is being used to ensure that user conform deleting the honey product. 
+16. If a user is logged in, a 'Your Profile' link is available for the user to check his/her username and email address. There is also options for the user to reset or change his/her password.
+17. If a user is logged in, a 'LOGOUT' link is available for the user to log out.
+18. If a user is not logged in, he/she could register an account with the 'REGISTER' link on the navbar. Thereafter, there is the option to login with clicking on the 'LOGIN' link.
+19. If there are any errors in finding a page, the user would be brought to an error 404 page where user can return to the homepage page.
+20. If there are any internal server errors along the way, the user would be brought to an error 500 page where the same sad cat image would be displayed. There is a button for the user to click to go back to the homepage.
 
 
 ## 7.0 Deployment <a name="testing"></a>
