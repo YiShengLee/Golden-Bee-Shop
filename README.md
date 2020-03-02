@@ -165,7 +165,28 @@ Year: 2030
 ![User Profile](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/user_profile.png)
 - The user could see his/her email and username on this page. There is the option to reset or change password also
 
-
+## 6.0 Technologies Used <a name="technology"></a>  
+Here are a list of programming languages, frameworks, technologies and tools used for this website:
+| Technologies  | Remarks  |
+|---|---|
+|[HTML5](https://www.w3schools.com/)   | Following the HTML5 convention for the html pages |
+|[CSS3](https://www.w3schools.com/)   | Following the CSS3 convention for the css files |
+|[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)   | Following the ES6 convention for the js files |
+|[jQuery website](https://code.jquery.com/)   | Used to simplify DOM manipulation |
+|[Bootstrap](https://getbootstrap.com/)   | Used the bootstrap components and grid system to style this website |
+|[Fontawesome](https://fontawesome.com/)   | Picked icons from here to style this website |
+|[Favicon](Used to create the favicon for this website)   | Used to create the favicon for this website |
+|[Django](https://docs.djangoproject.com/en/3.0/)   | 	Used this high level Python framework to build this website |
+|[Python](https://www.python.org/)   | The main programming language used to build this project |
+|[Cloud9](https://c9.io/)   | An IDE used to develop the website. |
+|[Git](https://git-scm.com/)   | Used for version control to regularly commit codes to Github |
+|[GitHub](https://github.com/)   | Used as a remote backup of code used in this project |
+|[Heroku](https://www.heroku.com/)   | Used as a platform for this project to be deployed to |
+|[PostgresSQL](https://www.postgresql.org/)   | To allow the storage of database in sqlite before it can be used in Heroku as a database. |
+|[UploadCare](https://uploadcare.com/)   | A tool that enables images uploading |
+|[Stripe Payments](https://stripe.com/gb)   | Online payment system to allow users to make payment to |
+|[Sqlite3](https://www.sqlite.org/index.html)   | SQLite3 was used to store database and retrieve data via the backend. |
+|[Adobe Photoshop](https://www.adobe.com/products/photoshop.html)   | Used to create image for all the README.md file |
 
 
 
