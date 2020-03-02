@@ -9,12 +9,23 @@ Create Product
 <!--{{ form.media }}-->
 
 <div class="container c2">
+    <div class="pageheader">
+        Create New Honey Product
+    </div>
+    
+    <!--Back Button Section-->
+    <a href="{% url "show_products" %}">
+        <div class="bk-btn">
+            <div class="bk-btn-triangle"></div>
+            <div class="bk-btn-bar"></div>
+        </div>
+    </a><br>  
+    
     
     <!--Form Section-->
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {% crispy form %}
-        <!--<input type="submit" name="Submit" class="btn btn-warning submit"/>-->
     </form>  
 </div>
 
