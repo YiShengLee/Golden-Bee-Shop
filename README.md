@@ -12,12 +12,13 @@ Golden Bee Store: [Click here to visit GoldenBeeStore](https://golden-bee-honey.
 1. #### [Introduction](#introduction)
 2. #### [User Stories](#userstories)
 3. #### [UX](#UX)
-4. #### [Features](#features)
-5. #### [Technologies Used](#technology)
-6. #### [Future Features to Implement](#implement)
-7. #### [Testing](#testing)
-8. #### [Deployment](#deployment)
-9. #### [Credits](#credits)
+4. #### [Wireframes](#wireframe)
+5. #### [Features](#features)
+6. #### [Technologies Used](#technology)
+7. #### [Future Features to Implement](#implement)
+8. #### [Testing](#testing)
+9. #### [Deployment](#deployment)
+10. #### [Credits](#credits)
 
 <br>
 
@@ -87,14 +88,20 @@ that required to be achieved for this website.
 19. If there are any errors in finding a page, the user would be brought to an error 404 page where user can return to the homepage page.
 20. If there are any internal server errors along the way, the user would be brought to an error 500 page where the same sad cat image would be displayed. There is a button for the user to click to go back to the homepage.
 
+## 4.0 Testing <a name="wireframe"></a>
+Wireframes were created initially to help me vsualise the website in different sized screens. Initial planning was done on how to setup the database and the website. I used Microsoft Word to sketch out this ER diagram.
 
-## 7.0 Deployment <a name="testing"></a>
+![Wireframes](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/wireframe.PNG)
+
+
+
+## 8.0 Testing <a name="testing"></a>
 A full testing process can be found in a separate [tests.md](https://github.com/YiShengLee/Golden-Bee-Shop/blob/master/tests.md) file.
 
 
 
 
-## 8.0 Deployment <a name="deployment"></a>
+## 9.0 Deployment <a name="deployment"></a>
 The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/).  
 :heavy_exclamation_mark: Please have the following installed in your IDE environment before working on it :heavy_exclamation_mark:
 - [Python 3](https://docs.python.org/3/installing/index.html)
@@ -103,7 +110,7 @@ The project was built using [AWS Cloud9](https://aws.amazon.com/cloud9/).
 The website is deployed using Heroku and the link is [Project 4 Golden Bee](https://golden-bee-honey.herokuapp.com/).
 
 
-### 8.1 How to deploy the code locally
+### 9.1 How to deploy the code locally
 If you wish to run this code locally, follow the instructions below:
 1.	Download the code from the Github repository at [https://github.com/YiShengLee/Golden-Bee-Shop](https://github.com/YiShengLee/Golden-Bee-Shop).
 2.	Click on Clone or download then Download ZIP. This will download the code into a ZIP folder locally on your computer.
@@ -114,7 +121,7 @@ If you wish to run this code locally, follow the instructions below:
 ![Github Clone Image](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/GitHub_clone.png)
 
 
-### 8.2 Cloning from Github
+### 9.2 Cloning from Github
 If you would like to clone this repository to your own IDE, follow the instructions below:
 
 **Step 1: Cloning Project**  
@@ -146,7 +153,7 @@ A window will pop up with a link. Click on the link to view the project.
   
 <br>
 
-### 8.3 Deploying to Heroku
+### 9.3 Deploying to Heroku
 This instructions shown below is from [Paul](https://github.com/kunxin-chor).  
 Ensure you had [<span style="color:green">**REGISTER HEROKU**</span>](https://dashboard.heroku.com/) account.
 
@@ -346,21 +353,21 @@ At the very top of the page in Heroku, click "Open App". You will now be able to
 
 <br>
 
-## 9.0 Credits <a name="credits"></a>
+## 10.0 Credits <a name="credits"></a>
 
-### 9.1 Code
+### 10.1 Code
 - [w3schools](https://www.w3schools.com/)
     - Grid Layout
     - Media Query
 
-### 9.2 Images
+### 10.2 Images
 All images for this web site are being used under free commercial license from:
 - [ShutterStock](https://www.google.com.sg/)
 - [Unsplash](https://unsplash.com/)
 - [Imgur](https://imgur.com/)
 
 
-### 9.3 Icons
+### 10.3 Icons
 FontAwesome
 - [Shopping Cart Icon](https://fontawesome.com/icons/shopping-cart?style=solid)
 
@@ -391,7 +398,7 @@ Icon8
 
 - [Bee Icon](https://icons8.com/icons/set/bee)
 
-### 9.4 Fonts
+### 10.4 Fonts
 - [DM Serif Text](https://fonts.google.com/?query=DM+Serif+Text)
 - [EB Garamond](https://fonts.google.com/?query=EB+Garamond)
 - [Permanent Marker](https://fonts.google.com/?query=Permanent+Marker)
@@ -400,7 +407,7 @@ Icon8
 - [Kitchen](https://www.fontspace.com/west-wind-fonts/kitchen-kapers)
 - [HoneyFont](https://www.fontspace.com/kiddiefonts/save-the-honeybee)
 
-### 9.5 Others
+### 10.5 Others
 - [Flash Message](https://docs.djangoproject.com/en/2.2/ref/contrib/messages/)
 - [Model Field Referance](https://docs.djangoproject.com/en/2.2/ref/models/fields/)
 - [Modal Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/)
