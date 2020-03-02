@@ -27,8 +27,8 @@ Golden Bee Store is a website created for users who are looking to view
 and purchase honey. A new user could register for a new account, login, 
 change or reset a password, view his/her profile and logout. 
 The user could also search for honey by name or a category. 
-A logged in superuser has extra game CRUD rights which allow him/her 
-to add a game, edit the game's record and even delete it from the database.  
+A logged in superuser has CRUD rights which allow him/her 
+to add a honey product, edit the honey's record and even delete it from the database.  
 
 Please register as a new user or use the following account to navigate around the shop:
 
@@ -105,13 +105,68 @@ Wireframes were created initially to help me vsualise the website in different s
 2. **Add a Honey Product**
 
 ![Add Product](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/add_product.PNG)
-- Available from a link on the navigation bar. This feature is available for superusers when logged in. A form is available for the user to input all fields, which are all required, and an image upload feature as a whole package for this game to be saved. Do take note that each image must not exceed 1MB to be able to be uploaded successfully
+- Available from a link on the navigation bar. This feature is available for superusers when logged in. A form is available for the user to input all fields, which are all required, and an image upload feature to be saved. Do take note that each image must not exceed 1MB to be able to be uploaded successfully
+- The user could change his/her mind and click on the back icon button which would bring him/her back to the home page
 
 3. **Edit a Honey Product**
 
+![Edit Product](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/edit_product.png)
+- Only for logged in superusers in the 'Edit' page, the form on this page is pre-filled with the exisiting information about the honey from the database. Here the user could change any of the fields, including clearing and changing the image. The new information is saved with a click on the 'Submit' button
+- The user could change his/her mind and click on the back icon button which would bring him/her back to the home page
+
+4. **Golden Bee Shop**  
+
+![Shop](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/shop.png)
+- A click on the 'Find Out More' button would bring the user to view more information of the honey. Alternatively, the user could click on the honey image to be brought to the same page
+- A click on the 'ADD TO CART' button would add this honey to the shopping cart
+- On this page too, displays the results of any search the user makes from the top row on this page. A user could search for a honey by it's name or a category.
+
+5. **Honey Product Information**  
+
+![Detail Product Information](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/detail_product.png)
+- This page lists all the information about the honey, specifically the honey description and what is inside the box. There are buttons below it for the user to navigate easily to other parts of the website
+
+6. **Cart**  
+
+![Cart](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/cart.png)
+- All the added honey product will be displayed here. The user could adjust the quantity accordingly. The unit price, subtotal and grand total price are displayed for the user to know how much he/she is spending. The honey product could be deleted with a click on the 'dustbin' icon.
+
+7. **Checkout**  
+
+![Checkout](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/checkout.png)
+- A form is provided for the user to provide delivery details. There is also the payment part which would display error messages if the credit card details is wrong. Suggested information to input:
+```
+Credit card number: 4242 4242 4242 4242
+Security code (CVV): 123
+Month: 12
+Year: 2030
+```
+- The user could submit payment with a click on the 'SUBMIT PAYMENT' button
+
+8. **Stripe Payment**  
+
+![Stripe Success Payment](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/stripe_success.png)
+- The users would be making payment with Stripe's payment features
+
+9. **Register a New Account**  
+
+![Register Account](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/register.png)
+- A form is provided for the user to register an account with the store. This is needed for the user to make payment for honey selected in the shopping cart. After clicking on the 'REGISTER' button, the user is logged in and brought to the home page
+
+10. **Login Account**  
+
+![Login Account](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/login.png)
+- A form is provided for the user to login to their account. A username and password is needed and upon clicking the 'LOGIN' button, the user is logged in and brought to the home page
+- The 'FORGET PASSWORD' button when clicked will allow the user to input his/her email for instructions on getting a new password
+- A user would be brought here on click of the 'LOGOUT' button where he/she is asked confirm logout. On successful logout, the user is brought to the homepage. Of course the user could cancel logging out too and be brought to the 'shop' page
+
+11. **User Profile**  
+
+![User Profile](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/user_profile.png)
+- The user could see his/her email and username on this page. There is the option to reset or change password also
 
 
-4. 
+
 
 
 
