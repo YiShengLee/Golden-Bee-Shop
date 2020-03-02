@@ -88,10 +88,30 @@ that required to be achieved for this website.
 19. If there are any errors in finding a page, the user would be brought to an error 404 page where user can return to the homepage page.
 20. If there are any internal server errors along the way, the user would be brought to an error 500 page where the same sad cat image would be displayed. There is a button for the user to click to go back to the homepage.
 
-## 4.0 Testing <a name="wireframe"></a>
+## 4.0 Wireframes <a name="wireframe"></a>
 Wireframes were created initially to help me vsualise the website in different sized screens. Initial planning was done on how to setup the database and the website. I used Microsoft Word to sketch out this ER diagram.
 
 ![Wireframes](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/wireframe.PNG)
+
+## 5.0 Features <a name="features"></a>  
+1. **Home Page (Golden Bee Store)**  
+
+![Wireframes](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/home_page.png)
+- When the user first arrives at the page, he/she is welcomed with a large carousel picture in the center, signifying that this website is about honey
+- An navigational bar with a logo of a bee in a hive with links to the other pages are provided. For the mobile devices, the links are presented when the user clicks on the 'hamburger' icon of 3 horizontal lines
+- There is a slogan for each carousel picture, with a "Shop Here Now" button to link user to see honey product
+- At the bottom of the page, there is a footer in the honey-like color with clickable icons to link to various personal social media platforms, Github repository and LinkedIn sites if anyone would like to contact me. There are some links to important information pertaining to having legal implications that the user may be in interested in. **Disclaimer** that this website is meant for educational purposes only
+
+2. **Add a Honey Product**
+
+![Add Product](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/add_product.PNG)
+- Available from a link on the navigation bar. This feature is available for superusers when logged in. A form is available for the user to input all fields, which are all required, and an image upload feature as a whole package for this game to be saved. Do take note that each image must not exceed 1MB to be able to be uploaded successfully
+
+3. **Edit a Honey Product**
+
+
+
+4. 
 
 
 
