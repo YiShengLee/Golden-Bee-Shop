@@ -2,6 +2,11 @@
 Project 4: FullStack Final Project
 Done by: Lee Yi Sheng
 
+![Main Picture](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/main.png)
+
+This **GoldenBeeStore** is a website for users who are looking to view and purchase raw organic honey.
+
+Golden Bee Store: [Link](https://golden-bee-honey.herokuapp.com/)
 
 ## Table of contents
 1. #### [Introduction](#introduction)
