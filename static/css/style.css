@@ -414,11 +414,6 @@ hr.divider {
 }
 
 
-/*.c5{*/
-/*    background-color: rgb(112,155,189);*/
-/*    text-align: center;*/
-/*}*/
-
 .c5{
     background-color: rgb(112,155,189,0.5);
     border: 1px solid black;
@@ -524,6 +519,17 @@ hr.divider {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.pro{
+    width: 80%;
+    font-family: 'Sriracha';
+    color: white;
+    font-size: 20px;
+}
+
+.pro:hover{
+    color: black;
 }
 
 
