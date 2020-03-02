@@ -1,12 +1,12 @@
 # <span style="color:rgb(224,162,0)">Golden Bee Store</span>
-Project 4: FullStack Final Project
+Project 4: FullStack Final Project  
 Done by: Lee Yi Sheng
 
 ![Main Picture](https://github.com/YiShengLee/Golden-Bee-Shop/raw/master/static/images/main.png)
 
 This **GoldenBeeStore** is a website for users who are looking to view and purchase raw organic honey.
 
-Golden Bee Store: [Link](https://golden-bee-honey.herokuapp.com/)
+Golden Bee Store: [Click here to visit GoldenBeeStore](https://golden-bee-honey.herokuapp.com/)
 
 ## Table of contents
 1. #### [Introduction](#introduction)
@@ -21,7 +21,31 @@ Golden Bee Store: [Link](https://golden-bee-honey.herokuapp.com/)
 
 <br>
 
-## Introduction <a name="introduction"></a>
+## 1.0 Introduction <a name="introduction"></a>
+Golden Bee Store is a website created for users who are looking to view
+and purchase honey. A new user could register for a new account, login, 
+change or reset a password, view his/her profile and logout. 
+The user could also search for honey by name or a category. 
+A logged in superuser has extra game CRUD rights which allow him/her 
+to add a game, edit the game's record and even delete it from the database.  
+
+Please register as a new user or use the following account to navigate around the shop:
+
+To log in as a user, please use the following Username & Password:
+```
+Username: BumbleBees
+Password: Freebee123!
+```
+
+To log in as a superuser or admin, please use the following Username & Password:
+```
+Username: WallaceGiantBee
+Password: Beezy123!
+```
+
+The deployed website used Heroku: [Click here](https://golden-bee-honey.herokuapp.com/)  
+
+The repository can be found in Github: [Click here](https://github.com/YiShengLee/Golden-Bee-Shop)
 
 
 ## 7.0 Deployment <a name="testing"></a>
