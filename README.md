@@ -47,6 +47,17 @@ The deployed website used Heroku: [Click here](https://golden-bee-honey.herokuap
 
 The repository can be found in Github: [Click here](https://github.com/YiShengLee/Golden-Bee-Shop)
 
+## 2.0 User Stories <a name="userstories"></a>  
+As a user, someone who like to buy raw and organic honey and found this website. I'd like to see:  
+- A professional, modern and clean looking website to attract me to continue clicking on the other features
+- Easy to navigate around the website and point to the correct pages
+- Able to search honey by name or category
+- Buttons which are straightforward in their purpose that allow me to view more information or do an action
+- SuperUser have full control of adding, viewing, editing and deleting honey product
+- Normal user & and superuser able to add honey product to cart, checkout and make payment with credit card
+- The ability to register an account, login, logout, change password, reset password and view my profile details
+
+
 
 ## 7.0 Deployment <a name="testing"></a>
 A full testing process can be found in a separate [tests.md](https://github.com/YiShengLee/Golden-Bee-Shop/blob/master/tests.md) file.
